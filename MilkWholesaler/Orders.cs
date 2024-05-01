@@ -20,7 +20,7 @@ namespace MilkWholesaler
             mainForm = main;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button_return_Click(object sender, EventArgs e)
         {
             this.Close();
             mainForm.Show();

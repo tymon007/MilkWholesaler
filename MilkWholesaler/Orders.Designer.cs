@@ -28,33 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button3 = new Button();
-            SuspendLayout();
+            this.button_return = new System.Windows.Forms.Button();
+            this.SuspendLayout();
             // 
-            // button3
+            // button_return
             // 
-            button3.BackgroundImage = Properties.Resources._return;
-            button3.BackgroundImageLayout = ImageLayout.Stretch;
-            button3.Location = new Point(748, 12);
-            button3.Name = "button3";
-            button3.Size = new Size(40, 40);
-            button3.TabIndex = 8;
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            this.button_return.BackgroundImage = global::MilkWholesaler.Properties.Resources._return;
+            this.button_return.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_return.Location = new System.Drawing.Point(748, 12);
+            this.button_return.Name = "button_return";
+            this.button_return.Size = new System.Drawing.Size(40, 40);
+            this.button_return.TabIndex = 1;
+            this.button_return.UseVisualStyleBackColor = true;
+            this.button_return.Click += new System.EventHandler(this.button_return_Click);
             // 
             // Orders
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button3);
-            Name = "Orders";
-            Text = "Orders";
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_return);
+            this.Name = "Orders";
+            this.Text = "Orders";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
 
-        private Button button3;
+        private System.Windows.Forms.Button button_return;
     }
 }
