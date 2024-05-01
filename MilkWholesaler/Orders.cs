@@ -10,19 +10,18 @@ using System.Windows.Forms;
 
 namespace MilkWholesaler
 {
-    public partial class Inventory : Form
+    public partial class Orders : Form
     {
         private Form mainForm;
 
-        public Inventory(Form main)
+        public Orders(Form main)
         {
             InitializeComponent();
             mainForm = main;
         }
 
-        private void button_return_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-
             this.Close();
             mainForm.Show();
         }

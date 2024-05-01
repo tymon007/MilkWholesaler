@@ -29,40 +29,42 @@
         private void InitializeComponent()
         {
             button_inventory = new Button();
-            button1 = new Button();
-            button2 = new Button();
+            button_orders = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // button_inventory
             // 
             button_inventory.BackgroundImage = Properties.Resources.inventory;
             button_inventory.BackgroundImageLayout = ImageLayout.Stretch;
-            button_inventory.Location = new Point(223, 125);
+            button_inventory.Location = new Point(69, 199);
             button_inventory.Name = "button_inventory";
             button_inventory.Size = new Size(150, 150);
             button_inventory.TabIndex = 0;
             button_inventory.UseVisualStyleBackColor = true;
             button_inventory.Click += button_inventory_Click;
             // 
-            // button1
+            // button_orders
             // 
-            button1.BackgroundImage = Properties.Resources.inventory;
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.Location = new Point(21, 125);
-            button1.Name = "button1";
-            button1.Size = new Size(150, 150);
-            button1.TabIndex = 1;
-            button1.UseVisualStyleBackColor = true;
+            button_orders.BackgroundImage = Properties.Resources.orders1;
+            button_orders.BackgroundImageLayout = ImageLayout.Stretch;
+            button_orders.Location = new Point(380, 199);
+            button_orders.Name = "button_orders";
+            button_orders.Size = new Size(150, 150);
+            button_orders.TabIndex = 2;
+            button_orders.UseVisualStyleBackColor = true;
+            button_orders.Click += button_orders_Click;
             // 
-            // button2
+            // pictureBox1
             // 
-            button2.BackgroundImage = Properties.Resources.inventory;
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.Location = new Point(426, 125);
-            button2.Name = "button2";
-            button2.Size = new Size(150, 150);
-            button2.TabIndex = 2;
-            button2.UseVisualStyleBackColor = true;
+            pictureBox1.Image = Properties.Resources.milkman_wms;
+            pictureBox1.Location = new Point(184, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(228, 122);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
             // 
             // Form1
             // 
@@ -70,18 +72,19 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.milkbckg;
             ClientSize = new Size(606, 407);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(pictureBox1);
+            Controls.Add(button_orders);
             Controls.Add(button_inventory);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Button button_inventory;
-        private Button button1;
-        private Button button2;
+        private Button button_orders;
+        private PictureBox pictureBox1;
     }
 }

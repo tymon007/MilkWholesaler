@@ -35,6 +35,7 @@
             button1 = new Button();
             button2 = new Button();
             trackBar1 = new TrackBar();
+            button_return = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
             SuspendLayout();
@@ -100,11 +101,23 @@
             trackBar1.Size = new Size(104, 45);
             trackBar1.TabIndex = 6;
             // 
+            // button_return
+            // 
+            button_return.BackgroundImage = Properties.Resources._return;
+            button_return.BackgroundImageLayout = ImageLayout.Stretch;
+            button_return.Location = new Point(748, 12);
+            button_return.Name = "button_return";
+            button_return.Size = new Size(40, 40);
+            button_return.TabIndex = 7;
+            button_return.UseVisualStyleBackColor = true;
+            button_return.Click += button_return_Click;
+            // 
             // Inventory
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button_return);
             Controls.Add(trackBar1);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -129,5 +142,6 @@
         private Button button1;
         private Button button2;
         private TrackBar trackBar1;
+        private Button button_return;
     }
 }

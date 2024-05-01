@@ -9,8 +9,16 @@ namespace MilkWholesaler
 
         private void button_inventory_Click(object sender, EventArgs e)
         {
-            Form inventory = new Inventory();
+            Form inventory = new Inventory(this);
             inventory.Show();
+            this.Hide();
+        }
+
+        private void button_orders_Click(object sender, EventArgs e)
+        {
+            Form orders = new Orders(this);
+            orders.Show();
+            this.Hide();
         }
     }
 }
