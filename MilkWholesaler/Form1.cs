@@ -6,5 +6,11 @@ namespace MilkWholesaler
         {
             InitializeComponent();
         }
+
+        private void button_inventory_Click(object sender, EventArgs e)
+        {
+            Form inventory = new Inventory();
+            inventory.Show();
+        }
     }
 }
