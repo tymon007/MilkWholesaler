@@ -1,6 +1,6 @@
 ﻿namespace MilkWholesaler
 {
-    partial class Inventory
+    partial class Sales
     {
         /// <summary>
         /// Required designer variable.
@@ -29,41 +29,39 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sales));
             this.milk_WholesalerDataSet1 = new MilkWholesaler.Milk_WholesalerDataSet1();
-            this.inventoryViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.inventoryViewTableAdapter = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.InventoryViewTableAdapter();
+            this.salesViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.salesViewTableAdapter = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.SalesViewTableAdapter();
             this.tableAdapterManager = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager();
-            this.inventoryViewBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.salesViewBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.inventoryViewDataGridView = new System.Windows.Forms.DataGridView();
+            this.salesViewDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button_restock = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button_complete = new System.Windows.Forms.Button();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.inventoryViewBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.button_select = new System.Windows.Forms.Button();
-            this.button_filter = new System.Windows.Forms.Button();
-            this.button_search = new System.Windows.Forms.Button();
+            this.salesViewBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.button_return = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryViewBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryViewBindingNavigator)).BeginInit();
-            this.inventoryViewBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryViewDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesViewBindingNavigator)).BeginInit();
+            this.salesViewBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.salesViewDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // milk_WholesalerDataSet1
@@ -71,14 +69,14 @@
             this.milk_WholesalerDataSet1.DataSetName = "Milk_WholesalerDataSet1";
             this.milk_WholesalerDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // inventoryViewBindingSource
+            // salesViewBindingSource
             // 
-            this.inventoryViewBindingSource.DataMember = "InventoryView";
-            this.inventoryViewBindingSource.DataSource = this.milk_WholesalerDataSet1;
+            this.salesViewBindingSource.DataMember = "SalesView";
+            this.salesViewBindingSource.DataSource = this.milk_WholesalerDataSet1;
             // 
-            // inventoryViewTableAdapter
+            // salesViewTableAdapter
             // 
-            this.inventoryViewTableAdapter.ClearBeforeFill = true;
+            this.salesViewTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -95,13 +93,13 @@
             this.tableAdapterManager.SuppliersTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // inventoryViewBindingNavigator
+            // salesViewBindingNavigator
             // 
-            this.inventoryViewBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.inventoryViewBindingNavigator.BindingSource = this.inventoryViewBindingSource;
-            this.inventoryViewBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.inventoryViewBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.inventoryViewBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.salesViewBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.salesViewBindingNavigator.BindingSource = this.salesViewBindingSource;
+            this.salesViewBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.salesViewBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.salesViewBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -113,17 +111,17 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.inventoryViewBindingNavigatorSaveItem});
-            this.inventoryViewBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.inventoryViewBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.inventoryViewBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.inventoryViewBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.inventoryViewBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.inventoryViewBindingNavigator.Name = "inventoryViewBindingNavigator";
-            this.inventoryViewBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.inventoryViewBindingNavigator.Size = new System.Drawing.Size(876, 25);
-            this.inventoryViewBindingNavigator.TabIndex = 4;
-            this.inventoryViewBindingNavigator.Text = "bindingNavigator1";
+            this.salesViewBindingNavigatorSaveItem});
+            this.salesViewBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.salesViewBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.salesViewBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.salesViewBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.salesViewBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.salesViewBindingNavigator.Name = "salesViewBindingNavigator";
+            this.salesViewBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.salesViewBindingNavigator.Size = new System.Drawing.Size(800, 25);
+            this.salesViewBindingNavigator.TabIndex = 3;
+            this.salesViewBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorSeparator
             // 
@@ -157,68 +155,76 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // inventoryViewDataGridView
+            // salesViewDataGridView
             // 
-            this.inventoryViewDataGridView.AutoGenerateColumns = false;
-            this.inventoryViewDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.inventoryViewDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.salesViewDataGridView.AutoGenerateColumns = false;
+            this.salesViewDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.salesViewDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.inventoryViewDataGridView.DataSource = this.inventoryViewBindingSource;
-            this.inventoryViewDataGridView.Location = new System.Drawing.Point(126, 177);
-            this.inventoryViewDataGridView.Name = "inventoryViewDataGridView";
-            this.inventoryViewDataGridView.Size = new System.Drawing.Size(643, 220);
-            this.inventoryViewDataGridView.TabIndex = 5;
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7});
+            this.salesViewDataGridView.DataSource = this.salesViewBindingSource;
+            this.salesViewDataGridView.Location = new System.Drawing.Point(24, 141);
+            this.salesViewDataGridView.Name = "salesViewDataGridView";
+            this.salesViewDataGridView.Size = new System.Drawing.Size(736, 220);
+            this.salesViewDataGridView.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ProductName";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ProductName";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ClientName";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ClientName";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "QuantityOnHand";
-            this.dataGridViewTextBoxColumn2.HeaderText = "QuantityOnHand";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Address";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Address";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "ExpirationDate";
-            this.dataGridViewTextBoxColumn3.HeaderText = "ExpirationDate";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Phone";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Phone";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "WarehouseLocation";
-            this.dataGridViewTextBoxColumn4.HeaderText = "WarehouseLocation";
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "SaleDate";
+            this.dataGridViewTextBoxColumn4.HeaderText = "SaleDate";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Description";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Description";
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Status";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Status";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
             // dataGridViewTextBoxColumn6
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "UnitPrice";
-            this.dataGridViewTextBoxColumn6.HeaderText = "UnitPrice";
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Details";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Details";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // button_restock
+            // dataGridViewTextBoxColumn7
             // 
-            this.button_restock.BackgroundImage = global::MilkWholesaler.Properties.Resources.restock;
-            this.button_restock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_restock.Location = new System.Drawing.Point(47, 382);
-            this.button_restock.Name = "button_restock";
-            this.button_restock.Size = new System.Drawing.Size(40, 40);
-            this.button_restock.TabIndex = 6;
-            this.button_restock.UseVisualStyleBackColor = true;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "TotalPrice";
+            this.dataGridViewTextBoxColumn7.HeaderText = "TotalPrice";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // button_complete
+            // 
+            this.button_complete.BackgroundImage = global::MilkWholesaler.Properties.Resources.tick_icon;
+            this.button_complete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_complete.Location = new System.Drawing.Point(183, 68);
+            this.button_complete.Name = "button_complete";
+            this.button_complete.Size = new System.Drawing.Size(40, 40);
+            this.button_complete.TabIndex = 4;
+            this.button_complete.UseVisualStyleBackColor = true;
+            this.button_complete.Click += new System.EventHandler(this.button_complete_Click);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -274,77 +280,44 @@
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
-            // inventoryViewBindingNavigatorSaveItem
+            // salesViewBindingNavigatorSaveItem
             // 
-            this.inventoryViewBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.inventoryViewBindingNavigatorSaveItem.Enabled = false;
-            this.inventoryViewBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("inventoryViewBindingNavigatorSaveItem.Image")));
-            this.inventoryViewBindingNavigatorSaveItem.Name = "inventoryViewBindingNavigatorSaveItem";
-            this.inventoryViewBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.inventoryViewBindingNavigatorSaveItem.Text = "Save Data";
-            // 
-            // button_select
-            // 
-            this.button_select.BackgroundImage = global::MilkWholesaler.Properties.Resources.select;
-            this.button_select.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_select.Location = new System.Drawing.Point(47, 304);
-            this.button_select.Name = "button_select";
-            this.button_select.Size = new System.Drawing.Size(40, 40);
-            this.button_select.TabIndex = 3;
-            this.button_select.UseVisualStyleBackColor = true;
-            // 
-            // button_filter
-            // 
-            this.button_filter.BackgroundImage = global::MilkWholesaler.Properties.Resources.filter;
-            this.button_filter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_filter.Location = new System.Drawing.Point(47, 231);
-            this.button_filter.Name = "button_filter";
-            this.button_filter.Size = new System.Drawing.Size(40, 40);
-            this.button_filter.TabIndex = 2;
-            this.button_filter.UseVisualStyleBackColor = true;
-            // 
-            // button_search
-            // 
-            this.button_search.BackgroundImage = global::MilkWholesaler.Properties.Resources.search;
-            this.button_search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_search.Location = new System.Drawing.Point(47, 155);
-            this.button_search.Name = "button_search";
-            this.button_search.Size = new System.Drawing.Size(40, 40);
-            this.button_search.TabIndex = 1;
-            this.button_search.UseVisualStyleBackColor = true;
+            this.salesViewBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.salesViewBindingNavigatorSaveItem.Enabled = false;
+            this.salesViewBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("salesViewBindingNavigatorSaveItem.Image")));
+            this.salesViewBindingNavigatorSaveItem.Name = "salesViewBindingNavigatorSaveItem";
+            this.salesViewBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.salesViewBindingNavigatorSaveItem.Text = "Save Data";
             // 
             // button_return
             // 
             this.button_return.BackgroundImage = global::MilkWholesaler.Properties.Resources._return;
             this.button_return.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_return.Location = new System.Drawing.Point(763, 38);
+            this.button_return.Location = new System.Drawing.Point(748, 28);
             this.button_return.Name = "button_return";
             this.button_return.Size = new System.Drawing.Size(40, 40);
-            this.button_return.TabIndex = 0;
+            this.button_return.TabIndex = 2;
             this.button_return.UseVisualStyleBackColor = true;
             this.button_return.Click += new System.EventHandler(this.button_return_Click);
             // 
-            // Inventory
+            // Sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(876, 591);
-            this.Controls.Add(this.button_restock);
-            this.Controls.Add(this.inventoryViewDataGridView);
-            this.Controls.Add(this.inventoryViewBindingNavigator);
-            this.Controls.Add(this.button_select);
-            this.Controls.Add(this.button_filter);
-            this.Controls.Add(this.button_search);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_complete);
+            this.Controls.Add(this.salesViewDataGridView);
+            this.Controls.Add(this.salesViewBindingNavigator);
             this.Controls.Add(this.button_return);
-            this.Name = "Inventory";
-            this.Text = "Inventory";
-            this.Load += new System.EventHandler(this.Inventory_Load);
+            this.Name = "Sales";
+            this.Text = "Sales";
+            this.Load += new System.EventHandler(this.Sales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryViewBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryViewBindingNavigator)).EndInit();
-            this.inventoryViewBindingNavigator.ResumeLayout(false);
-            this.inventoryViewBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryViewDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesViewBindingNavigator)).EndInit();
+            this.salesViewBindingNavigator.ResumeLayout(false);
+            this.salesViewBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.salesViewDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,14 +326,11 @@
         #endregion
 
         private System.Windows.Forms.Button button_return;
-        private System.Windows.Forms.Button button_search;
-        private System.Windows.Forms.Button button_filter;
-        private System.Windows.Forms.Button button_select;
         private Milk_WholesalerDataSet1 milk_WholesalerDataSet1;
-        private System.Windows.Forms.BindingSource inventoryViewBindingSource;
-        private Milk_WholesalerDataSet1TableAdapters.InventoryViewTableAdapter inventoryViewTableAdapter;
+        private System.Windows.Forms.BindingSource salesViewBindingSource;
+        private Milk_WholesalerDataSet1TableAdapters.SalesViewTableAdapter salesViewTableAdapter;
         private Milk_WholesalerDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator inventoryViewBindingNavigator;
+        private System.Windows.Forms.BindingNavigator salesViewBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -372,14 +342,15 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton inventoryViewBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView inventoryViewDataGridView;
+        private System.Windows.Forms.ToolStripButton salesViewBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView salesViewDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.Button button_restock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.Button button_complete;
     }
 }

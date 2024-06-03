@@ -31,6 +31,7 @@
             this.button_inventory = new System.Windows.Forms.Button();
             this.button_orders = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button_sales = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -38,7 +39,7 @@
             // 
             this.button_inventory.BackgroundImage = global::MilkWholesaler.Properties.Resources.inventory;
             this.button_inventory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_inventory.Location = new System.Drawing.Point(99, 196);
+            this.button_inventory.Location = new System.Drawing.Point(27, 196);
             this.button_inventory.Name = "button_inventory";
             this.button_inventory.Size = new System.Drawing.Size(150, 150);
             this.button_inventory.TabIndex = 0;
@@ -49,7 +50,7 @@
             // 
             this.button_orders.BackgroundImage = global::MilkWholesaler.Properties.Resources.orders1;
             this.button_orders.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_orders.Location = new System.Drawing.Point(351, 196);
+            this.button_orders.Location = new System.Drawing.Point(231, 196);
             this.button_orders.Name = "button_orders";
             this.button_orders.Size = new System.Drawing.Size(150, 150);
             this.button_orders.TabIndex = 1;
@@ -66,12 +67,24 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // button_sales
+            // 
+            this.button_sales.BackgroundImage = global::MilkWholesaler.Properties.Resources.sales;
+            this.button_sales.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_sales.Location = new System.Drawing.Point(425, 196);
+            this.button_sales.Name = "button_sales";
+            this.button_sales.Size = new System.Drawing.Size(150, 150);
+            this.button_sales.TabIndex = 3;
+            this.button_sales.UseVisualStyleBackColor = true;
+            this.button_sales.Click += new System.EventHandler(this.button_sales_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MilkWholesaler.Properties.Resources.milkbckg;
             this.ClientSize = new System.Drawing.Size(609, 396);
+            this.Controls.Add(this.button_sales);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button_orders);
             this.Controls.Add(this.button_inventory);
@@ -87,6 +100,7 @@
         private System.Windows.Forms.Button button_inventory;
         private System.Windows.Forms.Button button_orders;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button_sales;
     }
 }
 

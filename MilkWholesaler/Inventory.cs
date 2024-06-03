@@ -25,5 +25,13 @@ namespace MilkWholesaler
             this.Close();
             mainForm.Show();
         }
+
+        private void Inventory_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'milk_WholesalerDataSet1.InventoryView' table. You can move, or remove it, as needed.
+            this.inventoryViewTableAdapter.Fill(this.milk_WholesalerDataSet1.InventoryView);
+
+        }
+
     }
 }

@@ -35,7 +35,7 @@
             // 
             this.button_return.BackgroundImage = global::MilkWholesaler.Properties.Resources._return;
             this.button_return.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_return.Location = new System.Drawing.Point(748, 12);
+            this.button_return.Location = new System.Drawing.Point(749, 28);
             this.button_return.Name = "button_return";
             this.button_return.Size = new System.Drawing.Size(40, 40);
             this.button_return.TabIndex = 1;
@@ -46,10 +46,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(997, 727);
             this.Controls.Add(this.button_return);
             this.Name = "Orders";
             this.Text = "Orders";
+            this.Load += new System.EventHandler(this.Orders_Load);
             this.ResumeLayout(false);
 
         }

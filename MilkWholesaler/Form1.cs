@@ -30,5 +30,12 @@ namespace MilkWholesaler
             orders.Show();
             this.Hide();
         }
+
+        private void button_sales_Click(object sender, EventArgs e)
+        {
+            Form sales = new Sales(this);
+            sales.Show();
+            this.Hide();
+        }
     }
 }

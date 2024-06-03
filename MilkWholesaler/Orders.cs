@@ -25,5 +25,11 @@ namespace MilkWholesaler
             this.Close();
             mainForm.Show();
         }
+
+
+        private void Orders_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
