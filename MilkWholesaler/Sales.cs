@@ -44,7 +44,6 @@ namespace MilkWholesaler
                 {
                     currentRow.Status = "Completed";
 
-                    // Use the TableAdapterManager to update the DataSet and database
                     tableAdapterManager.UpdateAll(milk_WholesalerDataSet1);
 
                     MessageBox.Show("Sale marked as completed.");
