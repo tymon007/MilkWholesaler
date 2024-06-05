@@ -3967,6 +3967,8 @@ namespace MilkWholesaler {
             
             private global::System.Data.DataColumn columnTotalPrice;
             
+            private global::System.Data.DataColumn columnSaleID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public SalesViewDataTable() {
@@ -4058,6 +4060,14 @@ namespace MilkWholesaler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SaleIDColumn {
+                get {
+                    return this.columnSaleID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4093,7 +4103,7 @@ namespace MilkWholesaler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SalesViewRow AddSalesViewRow(string ClientName, string Address, string Phone, System.DateTime SaleDate, string Status, string Details, decimal TotalPrice) {
+            public SalesViewRow AddSalesViewRow(string ClientName, string Address, string Phone, System.DateTime SaleDate, string Status, string Details, decimal TotalPrice, int SaleID) {
                 SalesViewRow rowSalesViewRow = ((SalesViewRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ClientName,
@@ -4102,10 +4112,18 @@ namespace MilkWholesaler {
                         SaleDate,
                         Status,
                         Details,
-                        TotalPrice};
+                        TotalPrice,
+                        SaleID};
                 rowSalesViewRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSalesViewRow);
                 return rowSalesViewRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SalesViewRow FindBySaleID(int SaleID) {
+                return ((SalesViewRow)(this.Rows.Find(new object[] {
+                            SaleID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4132,6 +4150,7 @@ namespace MilkWholesaler {
                 this.columnStatus = base.Columns["Status"];
                 this.columnDetails = base.Columns["Details"];
                 this.columnTotalPrice = base.Columns["TotalPrice"];
+                this.columnSaleID = base.Columns["SaleID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4151,11 +4170,17 @@ namespace MilkWholesaler {
                 base.Columns.Add(this.columnDetails);
                 this.columnTotalPrice = new global::System.Data.DataColumn("TotalPrice", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotalPrice);
+                this.columnSaleID = new global::System.Data.DataColumn("SaleID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSaleID);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnSaleID}, true));
                 this.columnClientName.MaxLength = 100;
                 this.columnAddress.MaxLength = 255;
                 this.columnPhone.MaxLength = 20;
                 this.columnStatus.MaxLength = 50;
                 this.columnDetails.MaxLength = 4000;
+                this.columnSaleID.AllowDBNull = false;
+                this.columnSaleID.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6140,6 +6165,17 @@ namespace MilkWholesaler {
                 }
                 set {
                     this[this.tableSalesView.TotalPriceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int SaleID {
+                get {
+                    return ((int)(this[this.tableSalesView.SaleIDColumn]));
+                }
+                set {
+                    this[this.tableSalesView.SaleIDColumn] = value;
                 }
             }
             
@@ -10911,7 +10947,14 @@ SELECT SupplierID, SupplierName, ContactPerson, Phone, Email, Address FROM Suppl
             tableMapping.ColumnMappings.Add("Status", "Status");
             tableMapping.ColumnMappings.Add("Details", "Details");
             tableMapping.ColumnMappings.Add("TotalPrice", "TotalPrice");
+            tableMapping.ColumnMappings.Add("SaleID", "SaleID");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE Sales SET Status = @Status WHERE SaleID = @SaleID";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SaleID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "SaleID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10927,8 +10970,8 @@ SELECT SupplierID, SupplierName, ContactPerson, Phone, Email, Address FROM Suppl
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ClientName, Address, Phone, SaleDate, Status, Details, TotalPrice FROM dbo" +
-                ".SalesView";
+            this._commandCollection[0].CommandText = "SELECT ClientName, Address, Phone, SaleDate, Status, Details, TotalPrice, SaleID " +
+                "FROM SalesView";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -10954,6 +10997,35 @@ SELECT SupplierID, SupplierName, ContactPerson, Phone, Email, Address FROM Suppl
             Milk_WholesalerDataSet1.SalesViewDataTable dataTable = new Milk_WholesalerDataSet1.SalesViewDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(Milk_WholesalerDataSet1.SalesViewDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(Milk_WholesalerDataSet1 dataSet) {
+            return this.Adapter.Update(dataSet, "SalesView");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
         }
     }
     
@@ -10986,6 +11058,8 @@ SELECT SupplierID, SupplierName, ContactPerson, Phone, Email, Address FROM Suppl
         private SalesDetailsTableAdapter _salesDetailsTableAdapter;
         
         private SuppliersTableAdapter _suppliersTableAdapter;
+        
+        private SalesViewTableAdapter _salesViewTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -11130,6 +11204,20 @@ SELECT SupplierID, SupplierName, ContactPerson, Phone, Email, Address FROM Suppl
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public SalesViewTableAdapter SalesViewTableAdapter {
+            get {
+                return this._salesViewTableAdapter;
+            }
+            set {
+                this._salesViewTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -11183,6 +11271,10 @@ SELECT SupplierID, SupplierName, ContactPerson, Phone, Email, Address FROM Suppl
                             && (this._suppliersTableAdapter.Connection != null))) {
                     return this._suppliersTableAdapter.Connection;
                 }
+                if (((this._salesViewTableAdapter != null) 
+                            && (this._salesViewTableAdapter.Connection != null))) {
+                    return this._salesViewTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -11221,6 +11313,9 @@ SELECT SupplierID, SupplierName, ContactPerson, Phone, Email, Address FROM Suppl
                     count = (count + 1);
                 }
                 if ((this._suppliersTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._salesViewTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -11315,6 +11410,15 @@ SELECT SupplierID, SupplierName, ContactPerson, Phone, Email, Address FROM Suppl
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._salesViewTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.SalesView.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._salesViewTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -11397,6 +11501,14 @@ SELECT SupplierID, SupplierName, ContactPerson, Phone, Email, Address FROM Suppl
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._salesViewTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.SalesView.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._salesViewTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -11407,6 +11519,14 @@ SELECT SupplierID, SupplierName, ContactPerson, Phone, Email, Address FROM Suppl
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(Milk_WholesalerDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._salesViewTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.SalesView.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._salesViewTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._salesDetailsTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.SalesDetails.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -11563,6 +11683,11 @@ SELECT SupplierID, SupplierName, ContactPerson, Phone, Email, Address FROM Suppl
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
+            if (((this._salesViewTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._salesViewTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
@@ -11676,6 +11801,15 @@ SELECT SupplierID, SupplierName, ContactPerson, Phone, Email, Address FROM Suppl
                         adaptersWithAcceptChangesDuringUpdate.Add(this._suppliersTableAdapter.Adapter);
                     }
                 }
+                if ((this._salesViewTableAdapter != null)) {
+                    revertConnections.Add(this._salesViewTableAdapter, this._salesViewTableAdapter.Connection);
+                    this._salesViewTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._salesViewTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._salesViewTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._salesViewTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._salesViewTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -11769,6 +11903,10 @@ SELECT SupplierID, SupplierName, ContactPerson, Phone, Email, Address FROM Suppl
                 if ((this._suppliersTableAdapter != null)) {
                     this._suppliersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._suppliersTableAdapter]));
                     this._suppliersTableAdapter.Transaction = null;
+                }
+                if ((this._salesViewTableAdapter != null)) {
+                    this._salesViewTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._salesViewTableAdapter]));
+                    this._salesViewTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

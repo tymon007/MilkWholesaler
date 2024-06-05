@@ -35,20 +35,24 @@ namespace MilkWholesaler
 
         private void button_complete_Click(object sender, EventArgs e)
         {
-            if (salesViewDataGridView.SelectedRows.Count > 0)
+            if (salesViewBindingSource.Current != null)
             {
-                int selectedRowIndex = salesViewDataGridView.SelectedRows[0].Index;
-                DataRow row = dataSet.Tables["Sales"].Rows[selectedRowIndex];
+                DataRowView currentRowView = (DataRowView)salesViewBindingSource.Current;
+                Milk_WholesalerDataSet1.SalesViewRow currentRow = (Milk_WholesalerDataSet1.SalesViewRow)currentRowView.Row;
 
-                if (row.RowState != DataRowState.Deleted)
+                if (!currentRow.IsStatusNull() && currentRow.Status != "Completed")
                 {
-                    row["Status"] = "Completed";
+                    currentRow.Status = "Completed";
+
+                    // Use the TableAdapterManager to update the DataSet and database
+                    tableAdapterManager.UpdateAll(milk_WholesalerDataSet1);
+
+                    MessageBox.Show("Sale marked as completed.");
                 }
-
-                // Update the database
-                adapter.Update(dataSet, "Sales");
-
-                MessageBox.Show("Sale marked as completed.");
+                else
+                {
+                    MessageBox.Show("The selected sale is already completed or no status available.");
+                }
             }
             else
             {

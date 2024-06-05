@@ -63,6 +63,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Milk_WholesalerDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Milk_WholesalerDataSet1.cs">
+      <DependentUpon>Milk_WholesalerDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Milk_WholesalerDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

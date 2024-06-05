@@ -30,17 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sales));
-            this.milk_WholesalerDataSet1 = new MilkWholesaler.Milk_WholesalerDataSet1();
-            this.salesViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.salesViewTableAdapter = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.SalesViewTableAdapter();
-            this.tableAdapterManager = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager();
             this.salesViewBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.salesViewBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.salesViewDataGridView = new System.Windows.Forms.DataGridView();
+            this.button_complete = new System.Windows.Forms.Button();
+            this.button_return = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,50 +53,16 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button_complete = new System.Windows.Forms.Button();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.salesViewBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.button_return = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salesViewBindingSource)).BeginInit();
+            this.salesViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.milk_WholesalerDataSet1 = new MilkWholesaler.Milk_WholesalerDataSet1();
+            this.salesViewTableAdapter = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.SalesViewTableAdapter();
+            this.tableAdapterManager = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.salesViewBindingNavigator)).BeginInit();
             this.salesViewBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salesViewDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // milk_WholesalerDataSet1
-            // 
-            this.milk_WholesalerDataSet1.DataSetName = "Milk_WholesalerDataSet1";
-            this.milk_WholesalerDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // salesViewBindingSource
-            // 
-            this.salesViewBindingSource.DataMember = "SalesView";
-            this.salesViewBindingSource.DataSource = this.milk_WholesalerDataSet1;
-            // 
-            // salesViewTableAdapter
-            // 
-            this.salesViewTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ClientsTableAdapter = null;
-            this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.InventoryTableAdapter = null;
-            this.tableAdapterManager.OffersTableAdapter = null;
-            this.tableAdapterManager.OrderDetailsTableAdapter = null;
-            this.tableAdapterManager.OrdersTableAdapter = null;
-            this.tableAdapterManager.ProductsTableAdapter = null;
-            this.tableAdapterManager.SalesDetailsTableAdapter = null;
-            this.tableAdapterManager.SalesTableAdapter = null;
-            this.tableAdapterManager.SuppliersTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // salesViewBindingNavigator
             // 
@@ -123,6 +94,49 @@
             this.salesViewBindingNavigator.TabIndex = 3;
             this.salesViewBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
@@ -138,22 +152,42 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // salesViewBindingNavigatorSaveItem
+            // 
+            this.salesViewBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.salesViewBindingNavigatorSaveItem.Enabled = false;
+            this.salesViewBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("salesViewBindingNavigatorSaveItem.Image")));
+            this.salesViewBindingNavigatorSaveItem.Name = "salesViewBindingNavigatorSaveItem";
+            this.salesViewBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.salesViewBindingNavigatorSaveItem.Text = "Save Data";
             // 
             // salesViewDataGridView
             // 
@@ -170,8 +204,30 @@
             this.salesViewDataGridView.DataSource = this.salesViewBindingSource;
             this.salesViewDataGridView.Location = new System.Drawing.Point(24, 141);
             this.salesViewDataGridView.Name = "salesViewDataGridView";
-            this.salesViewDataGridView.Size = new System.Drawing.Size(736, 220);
+            this.salesViewDataGridView.Size = new System.Drawing.Size(743, 220);
             this.salesViewDataGridView.TabIndex = 3;
+            // 
+            // button_complete
+            // 
+            this.button_complete.BackgroundImage = global::MilkWholesaler.Properties.Resources.tick_icon;
+            this.button_complete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_complete.Location = new System.Drawing.Point(24, 77);
+            this.button_complete.Name = "button_complete";
+            this.button_complete.Size = new System.Drawing.Size(40, 40);
+            this.button_complete.TabIndex = 4;
+            this.button_complete.UseVisualStyleBackColor = true;
+            this.button_complete.Click += new System.EventHandler(this.button_complete_Click);
+            // 
+            // button_return
+            // 
+            this.button_return.BackgroundImage = global::MilkWholesaler.Properties.Resources._return;
+            this.button_return.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_return.Location = new System.Drawing.Point(748, 28);
+            this.button_return.Name = "button_return";
+            this.button_return.Size = new System.Drawing.Size(40, 40);
+            this.button_return.TabIndex = 2;
+            this.button_return.UseVisualStyleBackColor = true;
+            this.button_return.Click += new System.EventHandler(this.button_return_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -215,90 +271,34 @@
             this.dataGridViewTextBoxColumn7.HeaderText = "TotalPrice";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
-            // button_complete
+            // salesViewBindingSource
             // 
-            this.button_complete.BackgroundImage = global::MilkWholesaler.Properties.Resources.tick_icon;
-            this.button_complete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_complete.Location = new System.Drawing.Point(183, 68);
-            this.button_complete.Name = "button_complete";
-            this.button_complete.Size = new System.Drawing.Size(40, 40);
-            this.button_complete.TabIndex = 4;
-            this.button_complete.UseVisualStyleBackColor = true;
-            this.button_complete.Click += new System.EventHandler(this.button_complete_Click);
+            this.salesViewBindingSource.DataMember = "SalesView";
+            this.salesViewBindingSource.DataSource = this.milk_WholesalerDataSet1;
             // 
-            // bindingNavigatorAddNewItem
+            // milk_WholesalerDataSet1
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
+            this.milk_WholesalerDataSet1.DataSetName = "Milk_WholesalerDataSet1";
+            this.milk_WholesalerDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // bindingNavigatorDeleteItem
+            // salesViewTableAdapter
             // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.salesViewTableAdapter.ClearBeforeFill = true;
             // 
-            // bindingNavigatorMoveFirstItem
+            // tableAdapterManager
             // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // salesViewBindingNavigatorSaveItem
-            // 
-            this.salesViewBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.salesViewBindingNavigatorSaveItem.Enabled = false;
-            this.salesViewBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("salesViewBindingNavigatorSaveItem.Image")));
-            this.salesViewBindingNavigatorSaveItem.Name = "salesViewBindingNavigatorSaveItem";
-            this.salesViewBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.salesViewBindingNavigatorSaveItem.Text = "Save Data";
-            // 
-            // button_return
-            // 
-            this.button_return.BackgroundImage = global::MilkWholesaler.Properties.Resources._return;
-            this.button_return.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_return.Location = new System.Drawing.Point(748, 28);
-            this.button_return.Name = "button_return";
-            this.button_return.Size = new System.Drawing.Size(40, 40);
-            this.button_return.TabIndex = 2;
-            this.button_return.UseVisualStyleBackColor = true;
-            this.button_return.Click += new System.EventHandler(this.button_return_Click);
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ClientsTableAdapter = null;
+            this.tableAdapterManager.InventoryTableAdapter = null;
+            this.tableAdapterManager.OffersTableAdapter = null;
+            this.tableAdapterManager.OrderDetailsTableAdapter = null;
+            this.tableAdapterManager.OrdersTableAdapter = null;
+            this.tableAdapterManager.ProductsTableAdapter = null;
+            this.tableAdapterManager.SalesDetailsTableAdapter = null;
+            this.tableAdapterManager.SalesTableAdapter = null;
+            this.tableAdapterManager.SalesViewTableAdapter = this.salesViewTableAdapter;
+            this.tableAdapterManager.SuppliersTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // Sales
             // 
@@ -312,12 +312,12 @@
             this.Name = "Sales";
             this.Text = "Sales";
             this.Load += new System.EventHandler(this.Sales_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salesViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesViewBindingNavigator)).EndInit();
             this.salesViewBindingNavigator.ResumeLayout(false);
             this.salesViewBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salesViewDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
