@@ -54,8 +54,9 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productDetailsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button_complete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersViewBindingNavigator)).BeginInit();
@@ -130,7 +131,7 @@
             this.ordersViewBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.ordersViewBindingNavigator.Name = "ordersViewBindingNavigator";
             this.ordersViewBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.ordersViewBindingNavigator.Size = new System.Drawing.Size(997, 25);
+            this.ordersViewBindingNavigator.Size = new System.Drawing.Size(910, 25);
             this.ordersViewBindingNavigator.TabIndex = 2;
             this.ordersViewBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -238,12 +239,12 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
+            this.productDetailsColumn,
             this.dataGridViewTextBoxColumn8});
             this.ordersViewDataGridView.DataSource = this.ordersViewBindingSource;
-            this.ordersViewDataGridView.Location = new System.Drawing.Point(43, 196);
+            this.ordersViewDataGridView.Location = new System.Drawing.Point(62, 150);
             this.ordersViewDataGridView.Name = "ordersViewDataGridView";
-            this.ordersViewDataGridView.Size = new System.Drawing.Size(746, 268);
+            this.ordersViewDataGridView.Size = new System.Drawing.Size(744, 405);
             this.ordersViewDataGridView.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn1
@@ -276,11 +277,11 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "Status";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // dataGridViewTextBoxColumn7
+            // productDetailsColumn
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "ProductDetails";
-            this.dataGridViewTextBoxColumn7.HeaderText = "ProductDetails";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.productDetailsColumn.DataPropertyName = "ProductDetails";
+            this.productDetailsColumn.HeaderText = "ProductDetails";
+            this.productDetailsColumn.Name = "productDetailsColumn";
             // 
             // dataGridViewTextBoxColumn8
             // 
@@ -288,11 +289,23 @@
             this.dataGridViewTextBoxColumn8.HeaderText = "TotalPrice";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
+            // button_complete
+            // 
+            this.button_complete.BackgroundImage = global::MilkWholesaler.Properties.Resources.tick_icon;
+            this.button_complete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_complete.Location = new System.Drawing.Point(62, 86);
+            this.button_complete.Name = "button_complete";
+            this.button_complete.Size = new System.Drawing.Size(40, 40);
+            this.button_complete.TabIndex = 5;
+            this.button_complete.UseVisualStyleBackColor = true;
+            this.button_complete.Click += new System.EventHandler(this.button_complete_Click);
+            // 
             // Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(997, 727);
+            this.ClientSize = new System.Drawing.Size(910, 637);
+            this.Controls.Add(this.button_complete);
             this.Controls.Add(this.ordersViewDataGridView);
             this.Controls.Add(this.ordersViewBindingNavigator);
             this.Controls.Add(this.button_return);
@@ -336,7 +349,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productDetailsColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.Button button_complete;
     }
 }
