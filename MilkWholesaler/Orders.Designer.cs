@@ -30,35 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Orders));
-            this.button_return = new System.Windows.Forms.Button();
-            this.milk_WholesalerDataSet1 = new MilkWholesaler.Milk_WholesalerDataSet1();
-            this.ordersViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ordersViewTableAdapter = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.OrdersViewTableAdapter();
-            this.tableAdapterManager = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager();
             this.ordersViewBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.ordersViewBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.ordersViewDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productDetailsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button_complete = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button_filter = new System.Windows.Forms.Button();
             this.textBox_search = new System.Windows.Forms.TextBox();
             this.radioButton_name = new System.Windows.Forms.RadioButton();
             this.radioButton_details = new System.Windows.Forms.RadioButton();
@@ -69,55 +48,37 @@
             this.radioButton_greater = new System.Windows.Forms.RadioButton();
             this.radioButton_selected = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordersViewBindingSource)).BeginInit();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productDetailsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ordersViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.milk_WholesalerDataSet1 = new MilkWholesaler.Milk_WholesalerDataSet1();
+            this.ordersViewTableAdapter = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.OrdersViewTableAdapter();
+            this.tableAdapterManager = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager();
+            this.button_filter = new System.Windows.Forms.Button();
+            this.button_complete = new System.Windows.Forms.Button();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.ordersViewBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.button_return = new System.Windows.Forms.Button();
+            this.button_restock = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ordersViewBindingNavigator)).BeginInit();
             this.ordersViewBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ordersViewDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button_return
-            // 
-            this.button_return.BackgroundImage = global::MilkWholesaler.Properties.Resources._return;
-            this.button_return.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_return.Location = new System.Drawing.Point(749, 28);
-            this.button_return.Name = "button_return";
-            this.button_return.Size = new System.Drawing.Size(40, 40);
-            this.button_return.TabIndex = 1;
-            this.button_return.UseVisualStyleBackColor = true;
-            this.button_return.Click += new System.EventHandler(this.button_return_Click);
-            // 
-            // milk_WholesalerDataSet1
-            // 
-            this.milk_WholesalerDataSet1.DataSetName = "Milk_WholesalerDataSet1";
-            this.milk_WholesalerDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ordersViewBindingSource
-            // 
-            this.ordersViewBindingSource.DataMember = "OrdersView";
-            this.ordersViewBindingSource.DataSource = this.milk_WholesalerDataSet1;
-            // 
-            // ordersViewTableAdapter
-            // 
-            this.ordersViewTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ClientsTableAdapter = null;
-            this.tableAdapterManager.InventoryTableAdapter = null;
-            this.tableAdapterManager.OffersTableAdapter = null;
-            this.tableAdapterManager.OrderDetailsTableAdapter = null;
-            this.tableAdapterManager.OrdersTableAdapter = null;
-            this.tableAdapterManager.OrdersViewTableAdapter = this.ordersViewTableAdapter;
-            this.tableAdapterManager.ProductsTableAdapter = null;
-            this.tableAdapterManager.SalesDetailsTableAdapter = null;
-            this.tableAdapterManager.SalesTableAdapter = null;
-            this.tableAdapterManager.SalesViewTableAdapter = null;
-            this.tableAdapterManager.SuppliersTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // ordersViewBindingNavigator
             // 
@@ -149,48 +110,12 @@
             this.ordersViewBindingNavigator.TabIndex = 2;
             this.ordersViewBindingNavigator.Text = "bindingNavigator1";
             // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
@@ -212,37 +137,10 @@
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // ordersViewBindingNavigatorSaveItem
-            // 
-            this.ordersViewBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.ordersViewBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("ordersViewBindingNavigatorSaveItem.Image")));
-            this.ordersViewBindingNavigatorSaveItem.Name = "ordersViewBindingNavigatorSaveItem";
-            this.ordersViewBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.ordersViewBindingNavigatorSaveItem.Text = "Save Data";
-            this.ordersViewBindingNavigatorSaveItem.Click += new System.EventHandler(this.ordersViewBindingNavigatorSaveItem_Click);
             // 
             // ordersViewDataGridView
             // 
@@ -262,59 +160,6 @@
             this.ordersViewDataGridView.Size = new System.Drawing.Size(744, 453);
             this.ordersViewDataGridView.TabIndex = 2;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "SupplierName";
-            this.dataGridViewTextBoxColumn1.HeaderText = "SupplierName";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "ContactPerson";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ContactPerson";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Phone";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Phone";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "OrderDate";
-            this.dataGridViewTextBoxColumn5.HeaderText = "OrderDate";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Status";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Status";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // productDetailsColumn
-            // 
-            this.productDetailsColumn.DataPropertyName = "ProductDetails";
-            this.productDetailsColumn.HeaderText = "ProductDetails";
-            this.productDetailsColumn.Name = "productDetailsColumn";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "TotalPrice";
-            this.dataGridViewTextBoxColumn8.HeaderText = "TotalPrice";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // button_complete
-            // 
-            this.button_complete.BackgroundImage = global::MilkWholesaler.Properties.Resources.tick_icon;
-            this.button_complete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_complete.Location = new System.Drawing.Point(64, 78);
-            this.button_complete.Name = "button_complete";
-            this.button_complete.Size = new System.Drawing.Size(40, 40);
-            this.button_complete.TabIndex = 5;
-            this.button_complete.UseVisualStyleBackColor = true;
-            this.button_complete.Click += new System.EventHandler(this.button_complete_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -323,17 +168,6 @@
             this.label1.Size = new System.Drawing.Size(121, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Mark order as complete:";
-            // 
-            // button_filter
-            // 
-            this.button_filter.BackgroundImage = global::MilkWholesaler.Properties.Resources.filter;
-            this.button_filter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_filter.Location = new System.Drawing.Point(410, 112);
-            this.button_filter.Name = "button_filter";
-            this.button_filter.Size = new System.Drawing.Size(40, 40);
-            this.button_filter.TabIndex = 7;
-            this.button_filter.UseVisualStyleBackColor = true;
-            this.button_filter.Click += new System.EventHandler(this.button_filter_Click);
             // 
             // textBox_search
             // 
@@ -441,11 +275,201 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Reset all filters";
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "SupplierName";
+            this.dataGridViewTextBoxColumn1.HeaderText = "SupplierName";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "ContactPerson";
+            this.dataGridViewTextBoxColumn2.HeaderText = "ContactPerson";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Phone";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Phone";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "OrderDate";
+            this.dataGridViewTextBoxColumn5.HeaderText = "OrderDate";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Status";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Status";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // productDetailsColumn
+            // 
+            this.productDetailsColumn.DataPropertyName = "ProductDetails";
+            this.productDetailsColumn.HeaderText = "ProductDetails";
+            this.productDetailsColumn.Name = "productDetailsColumn";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "TotalPrice";
+            this.dataGridViewTextBoxColumn8.HeaderText = "TotalPrice";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // ordersViewBindingSource
+            // 
+            this.ordersViewBindingSource.DataMember = "OrdersView";
+            this.ordersViewBindingSource.DataSource = this.milk_WholesalerDataSet1;
+            // 
+            // milk_WholesalerDataSet1
+            // 
+            this.milk_WholesalerDataSet1.DataSetName = "Milk_WholesalerDataSet1";
+            this.milk_WholesalerDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ordersViewTableAdapter
+            // 
+            this.ordersViewTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ClientsTableAdapter = null;
+            this.tableAdapterManager.InventoryTableAdapter = null;
+            this.tableAdapterManager.OffersTableAdapter = null;
+            this.tableAdapterManager.OrderDetailsTableAdapter = null;
+            this.tableAdapterManager.OrdersTableAdapter = null;
+            this.tableAdapterManager.OrdersViewTableAdapter = this.ordersViewTableAdapter;
+            this.tableAdapterManager.ProductsTableAdapter = null;
+            this.tableAdapterManager.SalesDetailsTableAdapter = null;
+            this.tableAdapterManager.SalesTableAdapter = null;
+            this.tableAdapterManager.SalesViewTableAdapter = null;
+            this.tableAdapterManager.SuppliersTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // button_filter
+            // 
+            this.button_filter.BackgroundImage = global::MilkWholesaler.Properties.Resources.filter;
+            this.button_filter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_filter.Location = new System.Drawing.Point(410, 112);
+            this.button_filter.Name = "button_filter";
+            this.button_filter.Size = new System.Drawing.Size(40, 40);
+            this.button_filter.TabIndex = 7;
+            this.button_filter.UseVisualStyleBackColor = true;
+            this.button_filter.Click += new System.EventHandler(this.button_filter_Click);
+            // 
+            // button_complete
+            // 
+            this.button_complete.BackgroundImage = global::MilkWholesaler.Properties.Resources.tick_icon;
+            this.button_complete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_complete.Location = new System.Drawing.Point(64, 78);
+            this.button_complete.Name = "button_complete";
+            this.button_complete.Size = new System.Drawing.Size(40, 40);
+            this.button_complete.TabIndex = 5;
+            this.button_complete.UseVisualStyleBackColor = true;
+            this.button_complete.Click += new System.EventHandler(this.button_complete_Click);
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
+            // ordersViewBindingNavigatorSaveItem
+            // 
+            this.ordersViewBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ordersViewBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("ordersViewBindingNavigatorSaveItem.Image")));
+            this.ordersViewBindingNavigatorSaveItem.Name = "ordersViewBindingNavigatorSaveItem";
+            this.ordersViewBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.ordersViewBindingNavigatorSaveItem.Text = "Save Data";
+            this.ordersViewBindingNavigatorSaveItem.Click += new System.EventHandler(this.ordersViewBindingNavigatorSaveItem_Click);
+            // 
+            // button_return
+            // 
+            this.button_return.BackgroundImage = global::MilkWholesaler.Properties.Resources._return;
+            this.button_return.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_return.Location = new System.Drawing.Point(749, 28);
+            this.button_return.Name = "button_return";
+            this.button_return.Size = new System.Drawing.Size(40, 40);
+            this.button_return.TabIndex = 1;
+            this.button_return.UseVisualStyleBackColor = true;
+            this.button_return.Click += new System.EventHandler(this.button_return_Click);
+            // 
+            // button_restock
+            // 
+            this.button_restock.BackgroundImage = global::MilkWholesaler.Properties.Resources.restock;
+            this.button_restock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_restock.Location = new System.Drawing.Point(768, 159);
+            this.button_restock.Name = "button_restock";
+            this.button_restock.Size = new System.Drawing.Size(40, 40);
+            this.button_restock.TabIndex = 16;
+            this.button_restock.UseVisualStyleBackColor = true;
+            this.button_restock.Click += new System.EventHandler(this.button_restock_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(749, 143);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(79, 13);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Make an order:";
+            // 
             // Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(858, 670);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button_restock);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -458,8 +482,6 @@
             this.Name = "Orders";
             this.Text = "Orders";
             this.Load += new System.EventHandler(this.Orders_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordersViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersViewBindingNavigator)).EndInit();
             this.ordersViewBindingNavigator.ResumeLayout(false);
             this.ordersViewBindingNavigator.PerformLayout();
@@ -468,6 +490,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -514,5 +538,7 @@
         private System.Windows.Forms.RadioButton radioButton_greater;
         private System.Windows.Forms.RadioButton radioButton_lesser;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button_restock;
+        private System.Windows.Forms.Label label3;
     }
 }

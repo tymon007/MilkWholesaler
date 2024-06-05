@@ -71,6 +71,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Milk_WholesalerDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="OrderItem.cs" />
     <Compile Include="Orders.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +172,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tick-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -31,11 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Restock));
             this.milk_WholesalerDataSet1 = new MilkWholesaler.Milk_WholesalerDataSet1();
-            this.offersViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.offersViewTableAdapter = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.OffersViewTableAdapter();
             this.tableAdapterManager = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager();
             this.offersViewBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.offersViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -48,30 +47,34 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.offersViewBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.offersViewDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OfferID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SupplierID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Supplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox_search = new System.Windows.Forms.TextBox();
+            this.numericUpDown_quantity = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.button_complete = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button_select = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.offersViewTableAdapter = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.OffersViewTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.offersViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.offersViewBindingNavigator)).BeginInit();
             this.offersViewBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.offersViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.offersViewDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_quantity)).BeginInit();
             this.SuspendLayout();
             // 
             // milk_WholesalerDataSet1
             // 
             this.milk_WholesalerDataSet1.DataSetName = "Milk_WholesalerDataSet1";
             this.milk_WholesalerDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // offersViewBindingSource
-            // 
-            this.offersViewBindingSource.DataMember = "OffersView";
-            this.offersViewBindingSource.DataSource = this.milk_WholesalerDataSet1;
-            // 
-            // offersViewTableAdapter
-            // 
-            this.offersViewTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -116,7 +119,7 @@
             this.offersViewBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.offersViewBindingNavigator.Name = "offersViewBindingNavigator";
             this.offersViewBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.offersViewBindingNavigator.Size = new System.Drawing.Size(800, 25);
+            this.offersViewBindingNavigator.Size = new System.Drawing.Size(674, 25);
             this.offersViewBindingNavigator.TabIndex = 0;
             this.offersViewBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -128,6 +131,11 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // offersViewBindingSource
+            // 
+            this.offersViewBindingSource.DataMember = "OffersView";
+            this.offersViewBindingSource.DataSource = this.milk_WholesalerDataSet1;
             // 
             // bindingNavigatorCountItem
             // 
@@ -220,45 +228,159 @@
             this.offersViewDataGridView.AutoGenerateColumns = false;
             this.offersViewDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.offersViewDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
+            this.Product,
+            this.OfferID,
+            this.ProductID,
+            this.SupplierID,
+            this.Supplier,
+            this.Price});
             this.offersViewDataGridView.DataSource = this.offersViewBindingSource;
-            this.offersViewDataGridView.Location = new System.Drawing.Point(237, 91);
+            this.offersViewDataGridView.Location = new System.Drawing.Point(255, 87);
             this.offersViewDataGridView.Name = "offersViewDataGridView";
-            this.offersViewDataGridView.Size = new System.Drawing.Size(342, 351);
+            this.offersViewDataGridView.Size = new System.Drawing.Size(343, 351);
             this.offersViewDataGridView.TabIndex = 1;
             // 
-            // dataGridViewTextBoxColumn4
+            // Product
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "ProductName";
-            this.dataGridViewTextBoxColumn4.HeaderText = "ProductName";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.Product.DataPropertyName = "ProductName";
+            this.Product.HeaderText = "ProductName";
+            this.Product.Name = "Product";
             // 
-            // dataGridViewTextBoxColumn5
+            // OfferID
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "SupplierName";
-            this.dataGridViewTextBoxColumn5.HeaderText = "SupplierName";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.OfferID.DataPropertyName = "OfferID";
+            this.OfferID.HeaderText = "Column1";
+            this.OfferID.Name = "OfferID";
+            this.OfferID.Visible = false;
             // 
-            // dataGridViewTextBoxColumn6
+            // ProductID
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "SupplierPrice";
-            this.dataGridViewTextBoxColumn6.HeaderText = "SupplierPrice";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.ProductID.DataPropertyName = "ProductID";
+            this.ProductID.HeaderText = "ProductID";
+            this.ProductID.Name = "ProductID";
+            this.ProductID.Visible = false;
+            // 
+            // SupplierID
+            // 
+            this.SupplierID.DataPropertyName = "SupplierID";
+            this.SupplierID.HeaderText = "SupplierID";
+            this.SupplierID.Name = "SupplierID";
+            this.SupplierID.Visible = false;
+            // 
+            // Supplier
+            // 
+            this.Supplier.DataPropertyName = "SupplierName";
+            this.Supplier.HeaderText = "SupplierName";
+            this.Supplier.Name = "Supplier";
+            // 
+            // Price
+            // 
+            this.Price.DataPropertyName = "SupplierPrice";
+            this.Price.HeaderText = "SupplierPrice";
+            this.Price.Name = "Price";
             // 
             // textBox_search
             // 
-            this.textBox_search.Location = new System.Drawing.Point(39, 91);
+            this.textBox_search.Location = new System.Drawing.Point(309, 50);
             this.textBox_search.Name = "textBox_search";
             this.textBox_search.Size = new System.Drawing.Size(136, 20);
             this.textBox_search.TabIndex = 9;
+            this.textBox_search.TextChanged += new System.EventHandler(this.textBox_search_TextChanged);
+            // 
+            // numericUpDown_quantity
+            // 
+            this.numericUpDown_quantity.Location = new System.Drawing.Point(52, 77);
+            this.numericUpDown_quantity.Name = "numericUpDown_quantity";
+            this.numericUpDown_quantity.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown_quantity.TabIndex = 10;
+            this.numericUpDown_quantity.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(349, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Product:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(86, 61);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Quantity:";
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(12, 190);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(215, 154);
+            this.checkedListBox1.TabIndex = 13;
+            // 
+            // button_complete
+            // 
+            this.button_complete.BackgroundImage = global::MilkWholesaler.Properties.Resources.order;
+            this.button_complete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_complete.Location = new System.Drawing.Point(80, 378);
+            this.button_complete.Name = "button_complete";
+            this.button_complete.Size = new System.Drawing.Size(60, 60);
+            this.button_complete.TabIndex = 14;
+            this.button_complete.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(80, 362);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 13);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Confirm order:";
+            // 
+            // button_select
+            // 
+            this.button_select.BackgroundImage = global::MilkWholesaler.Properties.Resources.select;
+            this.button_select.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_select.Location = new System.Drawing.Point(89, 127);
+            this.button_select.Name = "button_select";
+            this.button_select.Size = new System.Drawing.Size(40, 40);
+            this.button_select.TabIndex = 16;
+            this.button_select.UseVisualStyleBackColor = true;
+            this.button_select.Click += new System.EventHandler(this.button_select_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(50, 111);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(133, 13);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Add selected item to order:";
+            // 
+            // offersViewTableAdapter
+            // 
+            this.offersViewTableAdapter.ClearBeforeFill = true;
             // 
             // Restock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(674, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.button_select);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button_complete);
+            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.numericUpDown_quantity);
             this.Controls.Add(this.textBox_search);
             this.Controls.Add(this.offersViewDataGridView);
             this.Controls.Add(this.offersViewBindingNavigator);
@@ -266,11 +388,12 @@
             this.Text = "Restock";
             this.Load += new System.EventHandler(this.Restock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.offersViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.offersViewBindingNavigator)).EndInit();
             this.offersViewBindingNavigator.ResumeLayout(false);
             this.offersViewBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.offersViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.offersViewDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_quantity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,9 +419,20 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton offersViewBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView offersViewDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.TextBox textBox_search;
+        private System.Windows.Forms.NumericUpDown numericUpDown_quantity;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.Button button_complete;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button_select;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Product;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OfferID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SupplierID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Supplier;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
     }
 }

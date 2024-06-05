@@ -147,5 +147,11 @@ namespace MilkWholesaler
             dateTimePicker_greater.Value = DateTime.Today;
             ordersViewBindingSource.Filter = "";
         }
+
+        private void button_restock_Click(object sender, EventArgs e)
+        {
+            Form restock = new Restock(string.Empty);
+            restock.ShowDialog();
+        }
     }
 }
