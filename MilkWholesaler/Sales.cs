@@ -58,5 +58,69 @@ namespace MilkWholesaler
                 MessageBox.Show("Please select a sale to complete.");
             }
         }
+        private void filterDate()
+        {
+            string dateFilter = dateTimePicker_greater.Value.ToString("yyyy-MM-dd");
+
+            if (radioButton_greater.Checked)
+            {
+                salesViewBindingSource.Filter = $"SaleDate > '{dateFilter}'";
+            }
+            else if (radioButton_lesser.Checked)
+            {
+                salesViewBindingSource.Filter = $"SaleDate < '{dateFilter}'";
+            }
+            else if (radioButton_selected.Checked)
+            {
+                salesViewBindingSource.Filter = $"SaleDate = '{dateFilter}'";
+            }
+        }
+        private void filterSearch()
+        {
+            string searchText = textBox_search.Text.Replace("'", "''");
+            if (radioButton_name.Checked)
+            {
+                salesViewBindingSource.Filter = $"ClientName LIKE '%{searchText}%'";
+            }
+            else if (radioButton_details.Checked)
+            {
+                salesViewBindingSource.Filter = $"Details LIKE '%{searchText}%'";
+            }
+        }
+
+        private void dateTimePicker_greater_ValueChanged(object sender, EventArgs e)
+        {
+            filterDate();
+        }
+
+        private void radioButton_greater_CheckedChanged(object sender, EventArgs e)
+        {
+            filterDate();
+        }
+
+        private void radioButton_lesser_CheckedChanged(object sender, EventArgs e)
+        {
+            filterDate();
+        }
+
+        private void radioButton_selected_CheckedChanged(object sender, EventArgs e)
+        {
+            filterDate();
+        }
+
+        private void textBox_search_TextChanged(object sender, EventArgs e)
+        {
+            filterSearch();
+        }
+
+        private void radioButton_details_CheckedChanged(object sender, EventArgs e)
+        {
+            filterSearch();
+        }
+
+        private void radioButton_name_CheckedChanged(object sender, EventArgs e)
+        {
+            filterSearch();
+        }
     }
 }

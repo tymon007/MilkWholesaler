@@ -33,5 +33,9 @@ namespace MilkWholesaler
 
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            inventoryViewBindingSource.Filter = $"ProductName LIKE '%{textBox1.Text.Replace("'", "''")}%'";
+        }
     }
 }

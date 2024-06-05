@@ -36,17 +36,17 @@
             this.ordersViewTableAdapter = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.OrdersViewTableAdapter();
             this.tableAdapterManager = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager();
             this.ordersViewBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.ordersViewBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.ordersViewDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,11 +57,24 @@
             this.productDetailsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button_complete = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button_filter = new System.Windows.Forms.Button();
+            this.textBox_search = new System.Windows.Forms.TextBox();
+            this.radioButton_name = new System.Windows.Forms.RadioButton();
+            this.radioButton_details = new System.Windows.Forms.RadioButton();
+            this.dateTimePicker_greater = new System.Windows.Forms.DateTimePicker();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioButton_lesser = new System.Windows.Forms.RadioButton();
+            this.radioButton_greater = new System.Windows.Forms.RadioButton();
+            this.radioButton_selected = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersViewBindingNavigator)).BeginInit();
             this.ordersViewBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ordersViewDataGridView)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_return
@@ -131,9 +144,34 @@
             this.ordersViewBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.ordersViewBindingNavigator.Name = "ordersViewBindingNavigator";
             this.ordersViewBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.ordersViewBindingNavigator.Size = new System.Drawing.Size(910, 25);
+            this.ordersViewBindingNavigator.Size = new System.Drawing.Size(858, 25);
             this.ordersViewBindingNavigator.TabIndex = 2;
             this.ordersViewBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -162,22 +200,16 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 15);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -185,7 +217,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -194,38 +226,20 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // ordersViewBindingNavigatorSaveItem
             // 
             this.ordersViewBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.ordersViewBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("ordersViewBindingNavigatorSaveItem.Image")));
             this.ordersViewBindingNavigatorSaveItem.Name = "ordersViewBindingNavigatorSaveItem";
-            this.ordersViewBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.ordersViewBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.ordersViewBindingNavigatorSaveItem.Text = "Save Data";
             this.ordersViewBindingNavigatorSaveItem.Click += new System.EventHandler(this.ordersViewBindingNavigatorSaveItem_Click);
             // 
@@ -242,9 +256,9 @@
             this.productDetailsColumn,
             this.dataGridViewTextBoxColumn8});
             this.ordersViewDataGridView.DataSource = this.ordersViewBindingSource;
-            this.ordersViewDataGridView.Location = new System.Drawing.Point(62, 150);
+            this.ordersViewDataGridView.Location = new System.Drawing.Point(64, 205);
             this.ordersViewDataGridView.Name = "ordersViewDataGridView";
-            this.ordersViewDataGridView.Size = new System.Drawing.Size(744, 405);
+            this.ordersViewDataGridView.Size = new System.Drawing.Size(744, 453);
             this.ordersViewDataGridView.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn1
@@ -293,18 +307,139 @@
             // 
             this.button_complete.BackgroundImage = global::MilkWholesaler.Properties.Resources.tick_icon;
             this.button_complete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_complete.Location = new System.Drawing.Point(62, 86);
+            this.button_complete.Location = new System.Drawing.Point(64, 78);
             this.button_complete.Name = "button_complete";
             this.button_complete.Size = new System.Drawing.Size(40, 40);
             this.button_complete.TabIndex = 5;
             this.button_complete.UseVisualStyleBackColor = true;
             this.button_complete.Click += new System.EventHandler(this.button_complete_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(31, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Mark order as complete:";
+            // 
+            // button_filter
+            // 
+            this.button_filter.BackgroundImage = global::MilkWholesaler.Properties.Resources.filter;
+            this.button_filter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_filter.Location = new System.Drawing.Point(410, 112);
+            this.button_filter.Name = "button_filter";
+            this.button_filter.Size = new System.Drawing.Size(40, 40);
+            this.button_filter.TabIndex = 7;
+            this.button_filter.UseVisualStyleBackColor = true;
+            this.button_filter.Click += new System.EventHandler(this.button_filter_Click);
+            // 
+            // textBox_search
+            // 
+            this.textBox_search.Location = new System.Drawing.Point(35, 66);
+            this.textBox_search.Name = "textBox_search";
+            this.textBox_search.Size = new System.Drawing.Size(136, 20);
+            this.textBox_search.TabIndex = 8;
+            this.textBox_search.TextChanged += new System.EventHandler(this.textBox_search_TextChanged);
+            // 
+            // radioButton_name
+            // 
+            this.radioButton_name.AutoSize = true;
+            this.radioButton_name.Checked = true;
+            this.radioButton_name.Location = new System.Drawing.Point(44, 20);
+            this.radioButton_name.Name = "radioButton_name";
+            this.radioButton_name.Size = new System.Drawing.Size(102, 17);
+            this.radioButton_name.TabIndex = 9;
+            this.radioButton_name.TabStop = true;
+            this.radioButton_name.Text = "Filter by Supplier";
+            this.radioButton_name.UseVisualStyleBackColor = true;
+            this.radioButton_name.CheckedChanged += new System.EventHandler(this.radioButton_name_CheckedChanged);
+            // 
+            // radioButton_details
+            // 
+            this.radioButton_details.AutoSize = true;
+            this.radioButton_details.Location = new System.Drawing.Point(35, 43);
+            this.radioButton_details.Name = "radioButton_details";
+            this.radioButton_details.Size = new System.Drawing.Size(136, 17);
+            this.radioButton_details.TabIndex = 10;
+            this.radioButton_details.Text = "Filter by Product Details";
+            this.radioButton_details.UseVisualStyleBackColor = true;
+            this.radioButton_details.CheckedChanged += new System.EventHandler(this.radioButton_details_CheckedChanged);
+            // 
+            // dateTimePicker_greater
+            // 
+            this.dateTimePicker_greater.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker_greater.Location = new System.Drawing.Point(56, 86);
+            this.dateTimePicker_greater.Name = "dateTimePicker_greater";
+            this.dateTimePicker_greater.Size = new System.Drawing.Size(92, 20);
+            this.dateTimePicker_greater.TabIndex = 11;
+            this.dateTimePicker_greater.ValueChanged += new System.EventHandler(this.dateTimePicker_greater_ValueChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton_name);
+            this.groupBox1.Controls.Add(this.radioButton_details);
+            this.groupBox1.Controls.Add(this.textBox_search);
+            this.groupBox1.Location = new System.Drawing.Point(155, 81);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.radioButton_selected);
+            this.groupBox2.Controls.Add(this.radioButton_greater);
+            this.groupBox2.Controls.Add(this.radioButton_lesser);
+            this.groupBox2.Controls.Add(this.dateTimePicker_greater);
+            this.groupBox2.Location = new System.Drawing.Point(509, 58);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 123);
+            this.groupBox2.TabIndex = 14;
+            this.groupBox2.TabStop = false;
+            // 
+            // radioButton_lesser
+            // 
+            this.radioButton_lesser.AutoSize = true;
+            this.radioButton_lesser.Location = new System.Drawing.Point(46, 37);
+            this.radioButton_lesser.Name = "radioButton_lesser";
+            this.radioButton_lesser.Size = new System.Drawing.Size(123, 17);
+            this.radioButton_lesser.TabIndex = 12;
+            this.radioButton_lesser.Text = "Lesser than selected";
+            this.radioButton_lesser.UseVisualStyleBackColor = true;
+            this.radioButton_lesser.CheckedChanged += new System.EventHandler(this.radioButton_lesser_CheckedChanged);
+            // 
+            // radioButton_greater
+            // 
+            this.radioButton_greater.AutoSize = true;
+            this.radioButton_greater.Location = new System.Drawing.Point(46, 60);
+            this.radioButton_greater.Name = "radioButton_greater";
+            this.radioButton_greater.Size = new System.Drawing.Size(127, 17);
+            this.radioButton_greater.TabIndex = 13;
+            this.radioButton_greater.Text = "Greater than selected";
+            this.radioButton_greater.UseVisualStyleBackColor = true;
+            this.radioButton_greater.CheckedChanged += new System.EventHandler(this.radioButton_greater_CheckedChanged);
+            // 
+            // radioButton_selected
+            // 
+            this.radioButton_selected.AutoSize = true;
+            this.radioButton_selected.Location = new System.Drawing.Point(57, 14);
+            this.radioButton_selected.Name = "radioButton_selected";
+            this.radioButton_selected.Size = new System.Drawing.Size(91, 17);
+            this.radioButton_selected.TabIndex = 14;
+            this.radioButton_selected.Text = "Selected date";
+            this.radioButton_selected.UseVisualStyleBackColor = true;
+            this.radioButton_selected.CheckedChanged += new System.EventHandler(this.radioButton_selected_CheckedChanged);
+            // 
             // Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(910, 637);
+            this.ClientSize = new System.Drawing.Size(858, 670);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.button_filter);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button_complete);
             this.Controls.Add(this.ordersViewDataGridView);
             this.Controls.Add(this.ordersViewBindingNavigator);
@@ -318,6 +453,10 @@
             this.ordersViewBindingNavigator.ResumeLayout(false);
             this.ordersViewBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ordersViewDataGridView)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,5 +491,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn productDetailsColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.Button button_complete;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button_filter;
+        private System.Windows.Forms.TextBox textBox_search;
+        private System.Windows.Forms.RadioButton radioButton_name;
+        private System.Windows.Forms.RadioButton radioButton_details;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_greater;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton radioButton_selected;
+        private System.Windows.Forms.RadioButton radioButton_greater;
+        private System.Windows.Forms.RadioButton radioButton_lesser;
     }
 }

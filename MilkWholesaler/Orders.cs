@@ -69,5 +69,83 @@ namespace MilkWholesaler
                 MessageBox.Show("Please select an order to complete.");
             }
         }
+        private void UpdateFilters()
+        {
+            List<string> filterParts = new List<string>();
+
+            if (!string.IsNullOrWhiteSpace(textBox_search.Text))
+            {
+                string searchText = textBox_search.Text.Replace("'", "''"); 
+                if (radioButton_name.Checked)
+                {
+                    filterParts.Add($"SupplierName LIKE '%{searchText}%'");
+                }
+                else if (radioButton_details.Checked)
+                {
+                    filterParts.Add($"ProductDetails LIKE '%{searchText}%'");
+                }
+            }
+
+            if (radioButton_greater.Checked)
+            {
+                filterParts.Add($"OrderDate > '{dateTimePicker_greater.Value.ToString("yyyy-MM-dd")}'");
+            }
+            else if (radioButton_lesser.Checked)
+            {
+                filterParts.Add($"OrderDate < '{dateTimePicker_greater.Value.ToString("yyyy-MM-dd")}'");
+            }
+            else if (radioButton_selected.Checked)
+            {
+                filterParts.Add($"OrderDate = '{dateTimePicker_greater.Value.ToString("yyyy-MM-dd")}'");
+            }
+
+            string combinedFilter = string.Join(" AND ", filterParts);
+            ordersViewBindingSource.Filter = combinedFilter;
+        }
+
+
+        private void textBox_search_TextChanged(object sender, EventArgs e)
+        {
+            UpdateFilters();
+        }
+
+
+        private void dateTimePicker_greater_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateFilters();
+        }
+
+        private void radioButton_greater_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateFilters();
+        }
+
+        private void radioButton_lesser_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateFilters();
+        }
+
+        private void radioButton_selected_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateFilters();
+        }
+
+        private void radioButton_name_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateFilters();
+        }
+
+        private void radioButton_details_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateFilters();
+        }
+
+        private void button_filter_Click(object sender, EventArgs e)
+        {
+            
+            textBox_search.Text = "";
+            dateTimePicker_greater.Value = DateTime.Today;
+            ordersViewBindingSource.Filter = "";
+        }
     }
 }
