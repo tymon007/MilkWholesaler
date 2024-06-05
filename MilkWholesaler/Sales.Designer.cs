@@ -67,6 +67,8 @@
             this.radioButton_greater = new System.Windows.Forms.RadioButton();
             this.radioButton_lesser = new System.Windows.Forms.RadioButton();
             this.dateTimePicker_greater = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button_filter = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.salesViewBindingNavigator)).BeginInit();
             this.salesViewBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salesViewBindingSource)).BeginInit();
@@ -370,7 +372,7 @@
             this.groupBox2.Controls.Add(this.radioButton_greater);
             this.groupBox2.Controls.Add(this.radioButton_lesser);
             this.groupBox2.Controls.Add(this.dateTimePicker_greater);
-            this.groupBox2.Location = new System.Drawing.Point(456, 28);
+            this.groupBox2.Location = new System.Drawing.Point(483, 28);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 123);
             this.groupBox2.TabIndex = 15;
@@ -418,11 +420,33 @@
             this.dateTimePicker_greater.TabIndex = 11;
             this.dateTimePicker_greater.ValueChanged += new System.EventHandler(this.dateTimePicker_greater_ValueChanged);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(391, 72);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Reset all filters";
+            // 
+            // button_filter
+            // 
+            this.button_filter.BackgroundImage = global::MilkWholesaler.Properties.Resources.filter;
+            this.button_filter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_filter.Location = new System.Drawing.Point(410, 88);
+            this.button_filter.Name = "button_filter";
+            this.button_filter.Size = new System.Drawing.Size(40, 40);
+            this.button_filter.TabIndex = 16;
+            this.button_filter.UseVisualStyleBackColor = true;
+            this.button_filter.Click += new System.EventHandler(this.button_filter_Click);
+            // 
             // Sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(846, 499);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button_filter);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -487,5 +511,7 @@
         private System.Windows.Forms.RadioButton radioButton_greater;
         private System.Windows.Forms.RadioButton radioButton_lesser;
         private System.Windows.Forms.DateTimePicker dateTimePicker_greater;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button_filter;
     }
 }

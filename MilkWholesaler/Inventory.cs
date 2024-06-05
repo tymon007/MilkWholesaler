@@ -37,5 +37,17 @@ namespace MilkWholesaler
         {
             inventoryViewBindingSource.Filter = $"ProductName LIKE '%{textBox1.Text.Replace("'", "''")}%'";
         }
+
+        private void inventoryViewDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex == inventoryViewDataGridView.Columns["Restock"].Index)
+            {
+                // Get the ProductName of the selected row
+                string productName = inventoryViewDataGridView.Rows[e.RowIndex].Cells["ProductName"].Value.ToString();
+
+                Form restock = new Restock(productName);
+                restock.ShowDialog();
+            }
+        }
     }
 }

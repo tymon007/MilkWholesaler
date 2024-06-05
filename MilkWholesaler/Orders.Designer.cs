@@ -68,6 +68,7 @@
             this.radioButton_lesser = new System.Windows.Forms.RadioButton();
             this.radioButton_greater = new System.Windows.Forms.RadioButton();
             this.radioButton_selected = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersViewBindingNavigator)).BeginInit();
@@ -380,7 +381,7 @@
             this.groupBox1.Controls.Add(this.radioButton_name);
             this.groupBox1.Controls.Add(this.radioButton_details);
             this.groupBox1.Controls.Add(this.textBox_search);
-            this.groupBox1.Location = new System.Drawing.Point(155, 81);
+            this.groupBox1.Location = new System.Drawing.Point(143, 81);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 100);
             this.groupBox1.TabIndex = 13;
@@ -431,11 +432,21 @@
             this.radioButton_selected.UseVisualStyleBackColor = true;
             this.radioButton_selected.CheckedChanged += new System.EventHandler(this.radioButton_selected_CheckedChanged);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(391, 96);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Reset all filters";
+            // 
             // Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(858, 670);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button_filter);
@@ -502,5 +513,6 @@
         private System.Windows.Forms.RadioButton radioButton_selected;
         private System.Windows.Forms.RadioButton radioButton_greater;
         private System.Windows.Forms.RadioButton radioButton_lesser;
+        private System.Windows.Forms.Label label2;
     }
 }
