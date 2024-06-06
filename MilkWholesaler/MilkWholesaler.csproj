@@ -58,11 +58,6 @@
     <Compile Include="Inventory.Designer.cs">
       <DependentUpon>Inventory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Milk_WholesalerDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Milk_WholesalerDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Milk_WholesalerDataSet1.cs">
       <DependentUpon>Milk_WholesalerDataSet1.xsd</DependentUpon>
     </Compile>
@@ -71,6 +66,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Milk_WholesalerDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Order.cs" />
+    <Compile Include="OrderDetail.cs" />
     <Compile Include="OrderItem.cs" />
     <Compile Include="Orders.cs">
       <SubType>Form</SubType>
@@ -117,17 +114,6 @@
     <EmbeddedResource Include="Sales.resx">
       <DependentUpon>Sales.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Milk_WholesalerDataSet.xsc">
-      <DependentUpon>Milk_WholesalerDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Milk_WholesalerDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Milk_WholesalerDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Milk_WholesalerDataSet.xss">
-      <DependentUpon>Milk_WholesalerDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Milk_WholesalerDataSet1.xsc">
       <DependentUpon>Milk_WholesalerDataSet1.xsd</DependentUpon>
     </None>

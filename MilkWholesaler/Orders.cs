@@ -152,6 +152,7 @@ namespace MilkWholesaler
         {
             Form restock = new Restock(string.Empty);
             restock.ShowDialog();
+            Orders_Load(sender, e);
         }
     }
 }

@@ -30,11 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Restock));
-            this.milk_WholesalerDataSet1 = new MilkWholesaler.Milk_WholesalerDataSet1();
-            this.tableAdapterManager = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager();
             this.offersViewBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.offersViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.milk_WholesalerDataSet1 = new MilkWholesaler.Milk_WholesalerDataSet1();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -62,36 +61,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button_select = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox_supplier = new System.Windows.Forms.TextBox();
+            this.tableAdapterManager = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager();
             this.offersViewTableAdapter = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.OffersViewTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet1)).BeginInit();
+            this.ordersTableAdapter1 = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.OrdersTableAdapter();
+            this.orderDetailsTableAdapter1 = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.OrderDetailsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.offersViewBindingNavigator)).BeginInit();
             this.offersViewBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.offersViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.offersViewDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_quantity)).BeginInit();
             this.SuspendLayout();
-            // 
-            // milk_WholesalerDataSet1
-            // 
-            this.milk_WholesalerDataSet1.DataSetName = "Milk_WholesalerDataSet1";
-            this.milk_WholesalerDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ClientsTableAdapter = null;
-            this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.InventoryTableAdapter = null;
-            this.tableAdapterManager.OffersTableAdapter = null;
-            this.tableAdapterManager.OrderDetailsTableAdapter = null;
-            this.tableAdapterManager.OrdersTableAdapter = null;
-            this.tableAdapterManager.OrdersViewTableAdapter = null;
-            this.tableAdapterManager.ProductsTableAdapter = null;
-            this.tableAdapterManager.SalesDetailsTableAdapter = null;
-            this.tableAdapterManager.SalesTableAdapter = null;
-            this.tableAdapterManager.SalesViewTableAdapter = null;
-            this.tableAdapterManager.SuppliersTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // offersViewBindingNavigator
             // 
@@ -136,6 +118,11 @@
             // 
             this.offersViewBindingSource.DataMember = "OffersView";
             this.offersViewBindingSource.DataSource = this.milk_WholesalerDataSet1;
+            // 
+            // milk_WholesalerDataSet1
+            // 
+            this.milk_WholesalerDataSet1.DataSetName = "Milk_WholesalerDataSet1";
+            this.milk_WholesalerDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -281,7 +268,7 @@
             // 
             // textBox_search
             // 
-            this.textBox_search.Location = new System.Drawing.Point(309, 50);
+            this.textBox_search.Location = new System.Drawing.Point(255, 58);
             this.textBox_search.Name = "textBox_search";
             this.textBox_search.Size = new System.Drawing.Size(136, 20);
             this.textBox_search.TabIndex = 9;
@@ -302,7 +289,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(349, 34);
+            this.label1.Location = new System.Drawing.Point(299, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 11;
@@ -334,6 +321,7 @@
             this.button_complete.Size = new System.Drawing.Size(60, 60);
             this.button_complete.TabIndex = 14;
             this.button_complete.UseVisualStyleBackColor = true;
+            this.button_complete.Click += new System.EventHandler(this.button_complete_Click);
             // 
             // label3
             // 
@@ -364,15 +352,59 @@
             this.label4.TabIndex = 17;
             this.label4.Text = "Add selected item to order:";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(506, 38);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 13);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Supplier:";
+            // 
+            // textBox_supplier
+            // 
+            this.textBox_supplier.Location = new System.Drawing.Point(462, 54);
+            this.textBox_supplier.Name = "textBox_supplier";
+            this.textBox_supplier.Size = new System.Drawing.Size(136, 20);
+            this.textBox_supplier.TabIndex = 18;
+            this.textBox_supplier.TextChanged += new System.EventHandler(this.textBox_supplier_TextChanged);
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ClientsTableAdapter = null;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.InventoryTableAdapter = null;
+            this.tableAdapterManager.OffersTableAdapter = null;
+            this.tableAdapterManager.OrderDetailsTableAdapter = null;
+            this.tableAdapterManager.OrdersTableAdapter = null;
+            this.tableAdapterManager.OrdersViewTableAdapter = null;
+            this.tableAdapterManager.ProductsTableAdapter = null;
+            this.tableAdapterManager.SalesDetailsTableAdapter = null;
+            this.tableAdapterManager.SalesTableAdapter = null;
+            this.tableAdapterManager.SalesViewTableAdapter = null;
+            this.tableAdapterManager.SuppliersTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // offersViewTableAdapter
             // 
             this.offersViewTableAdapter.ClearBeforeFill = true;
+            // 
+            // ordersTableAdapter1
+            // 
+            this.ordersTableAdapter1.ClearBeforeFill = true;
+            // 
+            // orderDetailsTableAdapter1
+            // 
+            this.orderDetailsTableAdapter1.ClearBeforeFill = true;
             // 
             // Restock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(674, 450);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBox_supplier);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button_select);
             this.Controls.Add(this.label3);
@@ -387,11 +419,11 @@
             this.Name = "Restock";
             this.Text = "Restock";
             this.Load += new System.EventHandler(this.Restock_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.offersViewBindingNavigator)).EndInit();
             this.offersViewBindingNavigator.ResumeLayout(false);
             this.offersViewBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.offersViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.offersViewDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_quantity)).EndInit();
             this.ResumeLayout(false);
@@ -434,5 +466,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SupplierID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Supplier;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox_supplier;
+        private Milk_WholesalerDataSet1TableAdapters.OrdersTableAdapter ordersTableAdapter1;
+        private Milk_WholesalerDataSet1TableAdapters.OrderDetailsTableAdapter orderDetailsTableAdapter1;
     }
 }

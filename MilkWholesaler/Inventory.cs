@@ -47,6 +47,7 @@ namespace MilkWholesaler
 
                 Form restock = new Restock(productName);
                 restock.ShowDialog();
+                Inventory_Load(sender, e);
             }
         }
     }
