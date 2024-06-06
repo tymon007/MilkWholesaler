@@ -74,6 +74,22 @@ namespace MilkWholesaler
                         Quantity = (int)numericUpDown_quantity.Value,
                         UnitPrice = Convert.ToDecimal(currentRow["SupplierPrice"])
                     };
+
+                    foreach (OrderItem item in orderItems)
+                    {
+                        if (item.ProductID == newItem.ProductID)
+                        {
+                            item.Quantity += newItem.Quantity;
+                            checkedListBox1.Items.Clear();
+                            foreach (OrderItem orderItem in orderItems)
+                            {
+                                string listItem1 = $"{orderItem.ProductName} - Quantity: {orderItem.Quantity}";
+                                checkedListBox1.Items.Add(listItem1, false);
+                            }
+                            return;
+                        }
+                    }
+
                     orderItems.Add(newItem);
 
                     string listItem = $"{newItem.ProductName} - Quantity: {newItem.Quantity}";
@@ -138,11 +154,41 @@ namespace MilkWholesaler
                 milk_WholesalerDataSet1.OrderDetails.AddOrderDetailsRow(newDetailRow);   
             }
             orderDetailsTableAdapter1.Update(milk_WholesalerDataSet1.OrderDetails);
+            orderItems.Clear();
+            checkedListBox1.Items.Clear();
         }
 
         private void textBox_supplier_TextChanged(object sender, EventArgs e)
         {
             UpdateFilters();
+        }
+
+        private void checkedListBox1_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            this.BeginInvoke(new Action(() =>
+            {
+                if (e.NewValue == CheckState.Checked)
+                {
+                    List<OrderItem> itemsToRemove = new List<OrderItem>();
+
+                    foreach (OrderItem item in orderItems)
+                    {
+                        if (checkedListBox1.Items[e.Index].ToString().Contains(item.ProductName))
+                        {
+                            itemsToRemove.Add(item);
+                        }
+                    }
+
+                    foreach (OrderItem item in itemsToRemove)
+                    {
+                        orderItems.Remove(item);
+                    }
+
+                    checkedListBox1.Items.RemoveAt(e.Index);
+                }
+            }));
+
+
         }
     }
 }
