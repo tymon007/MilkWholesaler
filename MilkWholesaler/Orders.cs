@@ -153,5 +153,10 @@ namespace MilkWholesaler
             Form restock = new Restock(string.Empty);
             restock.ShowDialog();
         }
+
+        private void ordersViewBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

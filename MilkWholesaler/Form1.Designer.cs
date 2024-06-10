@@ -32,7 +32,10 @@
             this.button_orders = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button_sales = new System.Windows.Forms.Button();
+            this.inventoryTableAdapter1 = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.InventoryTableAdapter();
+            this.milk_WholesalerDataSet11 = new MilkWholesaler.Milk_WholesalerDataSet1();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet11)).BeginInit();
             this.SuspendLayout();
             // 
             // button_inventory
@@ -78,6 +81,15 @@
             this.button_sales.UseVisualStyleBackColor = true;
             this.button_sales.Click += new System.EventHandler(this.button_sales_Click);
             // 
+            // inventoryTableAdapter1
+            // 
+            this.inventoryTableAdapter1.ClearBeforeFill = true;
+            // 
+            // milk_WholesalerDataSet11
+            // 
+            this.milk_WholesalerDataSet11.DataSetName = "Milk_WholesalerDataSet1";
+            this.milk_WholesalerDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -90,7 +102,9 @@
             this.Controls.Add(this.button_inventory);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet11)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -101,6 +115,8 @@
         private System.Windows.Forms.Button button_orders;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button_sales;
+        private Milk_WholesalerDataSet1TableAdapters.InventoryTableAdapter inventoryTableAdapter1;
+        private Milk_WholesalerDataSet1 milk_WholesalerDataSet11;
     }
 }
 

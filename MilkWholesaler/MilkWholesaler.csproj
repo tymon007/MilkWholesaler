@@ -71,6 +71,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Milk_WholesalerDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Milk_WholesalerDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Milk_WholesalerDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="OrderItem.cs" />
     <Compile Include="Orders.cs">
       <SubType>Form</SubType>
@@ -138,6 +143,17 @@
     </None>
     <None Include="Milk_WholesalerDataSet1.xss">
       <DependentUpon>Milk_WholesalerDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Milk_WholesalerDataSet2.xsc">
+      <DependentUpon>Milk_WholesalerDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Milk_WholesalerDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Milk_WholesalerDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Milk_WholesalerDataSet2.xss">
+      <DependentUpon>Milk_WholesalerDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
