@@ -46,6 +46,12 @@ namespace MilkWholesaler
                 {
                     inventoryViewDataGridView.Rows.RemoveAt(e.RowIndex);
                 }
+                // Get the ProductName of the selected row
+                string productName = inventoryViewDataGridView.Rows[e.RowIndex].Cells["ProductName"].Value.ToString();
+
+                Form restock = new Restock(productName);
+                restock.ShowDialog();
+                Inventory_Load(sender, e);
             }
         }
 
