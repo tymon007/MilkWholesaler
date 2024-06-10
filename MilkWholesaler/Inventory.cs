@@ -44,14 +44,17 @@ namespace MilkWholesaler
                 var result = MessageBox.Show("Are you sure you want to remove this expired milk?", "Confirmation", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
-                    inventoryViewDataGridView.Rows.RemoveAt(e.RowIndex);
+                    inventoryViewBindingSource.Remove(e.RowIndex);
+                    //inventoryViewDataGridView.Rows.RemoveAt(e.RowIndex);
+                    this.inventoryViewTableAdapter.Fill(this.milk_WholesalerDataSet1.InventoryView);
                 }
-                // Get the ProductName of the selected row
+            }
+            else if( e.RowIndex >= 0 && inventoryViewDataGridView.Columns[e.ColumnIndex].Name == "Restock" )
+            {
                 string productName = inventoryViewDataGridView.Rows[e.RowIndex].Cells["ProductName"].Value.ToString();
-
                 Form restock = new Restock(productName);
                 restock.ShowDialog();
-                Inventory_Load(sender, e);
+                this.inventoryViewTableAdapter.Fill(this.milk_WholesalerDataSet1.InventoryView);
             }
         }
 
@@ -96,7 +99,7 @@ namespace MilkWholesaler
             };
 
             inventoryViewDataGridView.Columns.Add(removeButtonColumn);
-            inventoryViewDataGridView.CellContentClick += new DataGridViewCellEventHandler(inventoryViewDataGridView_CellContentClick);
+            //inventoryViewDataGridView.CellContentClick += new DataGridViewCellEventHandler(inventoryViewDataGridView_CellContentClick);
         }
     }
 }

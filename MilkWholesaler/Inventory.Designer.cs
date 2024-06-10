@@ -31,29 +31,21 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory));
             this.inventoryViewBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.inventoryViewDataGridView = new System.Windows.Forms.DataGridView();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.inventoryViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.milk_WholesalerDataSet1 = new MilkWholesaler.Milk_WholesalerDataSet1();
-            this.inventoryViewTableAdapter = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.InventoryViewTableAdapter();
-            this.tableAdapterManager = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button_restock = new System.Windows.Forms.Button();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.inventoryViewBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.button_select = new System.Windows.Forms.Button();
-            this.button_filter = new System.Windows.Forms.Button();
-            this.button_search = new System.Windows.Forms.Button();
-            this.button_return = new System.Windows.Forms.Button();
+            this.inventoryViewDataGridView = new System.Windows.Forms.DataGridView();
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Restock = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,11 +53,20 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inventoryViewTableAdapter = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.InventoryViewTableAdapter();
+            this.tableAdapterManager = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button_restock = new System.Windows.Forms.Button();
+            this.button_select = new System.Windows.Forms.Button();
+            this.button_filter = new System.Windows.Forms.Button();
+            this.button_search = new System.Windows.Forms.Button();
+            this.button_return = new System.Windows.Forms.Button();
+            this.inventoryTableAdapter1 = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.InventoryTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryViewBindingNavigator)).BeginInit();
             this.inventoryViewBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryViewDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryViewDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // inventoryViewBindingNavigator
@@ -98,56 +99,14 @@
             this.inventoryViewBindingNavigator.TabIndex = 4;
             this.inventoryViewBindingNavigator.Text = "bindingNavigator1";
             // 
-            // bindingNavigatorCountItem
+            // bindingNavigatorAddNewItem
             // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // inventoryViewDataGridView
-            // 
-            this.inventoryViewDataGridView.AutoGenerateColumns = false;
-            this.inventoryViewDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.inventoryViewDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ProductName,
-            this.Restock,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.inventoryViewDataGridView.DataSource = this.inventoryViewBindingSource;
-            this.inventoryViewDataGridView.Location = new System.Drawing.Point(102, 177);
-            this.inventoryViewDataGridView.Name = "inventoryViewDataGridView";
-            this.inventoryViewDataGridView.Size = new System.Drawing.Size(746, 220);
-            this.inventoryViewDataGridView.TabIndex = 5;
-            this.inventoryViewDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.inventoryViewDataGridView_CellContentClick);
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // inventoryViewBindingSource
             // 
@@ -159,53 +118,12 @@
             this.milk_WholesalerDataSet1.DataSetName = "Milk_WholesalerDataSet1";
             this.milk_WholesalerDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // inventoryViewTableAdapter
+            // bindingNavigatorCountItem
             // 
-            this.inventoryViewTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ClientsTableAdapter = null;
-            this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.InventoryTableAdapter = null;
-            this.tableAdapterManager.OffersTableAdapter = null;
-            this.tableAdapterManager.OrderDetailsTableAdapter = null;
-            this.tableAdapterManager.OrdersTableAdapter = null;
-            this.tableAdapterManager.OrdersViewTableAdapter = null;
-            this.tableAdapterManager.ProductsTableAdapter = null;
-            this.tableAdapterManager.SalesDetailsTableAdapter = null;
-            this.tableAdapterManager.SalesTableAdapter = null;
-            this.tableAdapterManager.SalesViewTableAdapter = null;
-            this.tableAdapterManager.SuppliersTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(169, 151);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // button_restock
-            // 
-            this.button_restock.BackgroundImage = global::MilkWholesaler.Properties.Resources.restock;
-            this.button_restock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_restock.Location = new System.Drawing.Point(38, 410);
-            this.button_restock.Name = "button_restock";
-            this.button_restock.Size = new System.Drawing.Size(40, 40);
-            this.button_restock.TabIndex = 6;
-            this.button_restock.UseVisualStyleBackColor = true;
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(29, 22);
+            this.bindingNavigatorCountItem.Text = "z {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorDeleteItem
             // 
@@ -234,6 +152,26 @@
             this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
             // bindingNavigatorMoveNextItem
             // 
             this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -252,6 +190,11 @@
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
             // inventoryViewBindingNavigatorSaveItem
             // 
             this.inventoryViewBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -261,46 +204,24 @@
             this.inventoryViewBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.inventoryViewBindingNavigatorSaveItem.Text = "Save Data";
             // 
-            // button_select
+            // inventoryViewDataGridView
             // 
-            this.button_select.BackgroundImage = global::MilkWholesaler.Properties.Resources.select;
-            this.button_select.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_select.Location = new System.Drawing.Point(47, 304);
-            this.button_select.Name = "button_select";
-            this.button_select.Size = new System.Drawing.Size(40, 40);
-            this.button_select.TabIndex = 3;
-            this.button_select.UseVisualStyleBackColor = true;
-            // 
-            // button_filter
-            // 
-            this.button_filter.BackgroundImage = global::MilkWholesaler.Properties.Resources.filter;
-            this.button_filter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_filter.Location = new System.Drawing.Point(47, 199);
-            this.button_filter.Name = "button_filter";
-            this.button_filter.Size = new System.Drawing.Size(40, 40);
-            this.button_filter.TabIndex = 2;
-            this.button_filter.UseVisualStyleBackColor = true;
-            // 
-            // button_search
-            // 
-            this.button_search.BackgroundImage = global::MilkWholesaler.Properties.Resources.search;
-            this.button_search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_search.Location = new System.Drawing.Point(47, 245);
-            this.button_search.Name = "button_search";
-            this.button_search.Size = new System.Drawing.Size(40, 40);
-            this.button_search.TabIndex = 1;
-            this.button_search.UseVisualStyleBackColor = true;
-            // 
-            // button_return
-            // 
-            this.button_return.BackgroundImage = global::MilkWholesaler.Properties.Resources._return;
-            this.button_return.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_return.Location = new System.Drawing.Point(763, 38);
-            this.button_return.Name = "button_return";
-            this.button_return.Size = new System.Drawing.Size(40, 40);
-            this.button_return.TabIndex = 0;
-            this.button_return.UseVisualStyleBackColor = true;
-            this.button_return.Click += new System.EventHandler(this.button_return_Click);
+            this.inventoryViewDataGridView.AutoGenerateColumns = false;
+            this.inventoryViewDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.inventoryViewDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProductName,
+            this.Restock,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.inventoryViewDataGridView.DataSource = this.inventoryViewBindingSource;
+            this.inventoryViewDataGridView.Location = new System.Drawing.Point(102, 177);
+            this.inventoryViewDataGridView.Name = "inventoryViewDataGridView";
+            this.inventoryViewDataGridView.Size = new System.Drawing.Size(746, 220);
+            this.inventoryViewDataGridView.TabIndex = 5;
+            this.inventoryViewDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.inventoryViewDataGridView_CellContentClick);
             // 
             // ProductName
             // 
@@ -346,6 +267,90 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "UnitPrice";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
+            // inventoryViewTableAdapter
+            // 
+            this.inventoryViewTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ClientsTableAdapter = null;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.InventoryTableAdapter = null;
+            this.tableAdapterManager.OffersTableAdapter = null;
+            this.tableAdapterManager.OrderDetailsTableAdapter = null;
+            this.tableAdapterManager.OrdersTableAdapter = null;
+            this.tableAdapterManager.OrdersViewTableAdapter = null;
+            this.tableAdapterManager.ProductsTableAdapter = null;
+            this.tableAdapterManager.SalesDetailsTableAdapter = null;
+            this.tableAdapterManager.SalesTableAdapter = null;
+            this.tableAdapterManager.SalesViewTableAdapter = null;
+            this.tableAdapterManager.SuppliersTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(169, 151);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 7;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // button_restock
+            // 
+            this.button_restock.BackgroundImage = global::MilkWholesaler.Properties.Resources.restock;
+            this.button_restock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_restock.Location = new System.Drawing.Point(38, 410);
+            this.button_restock.Name = "button_restock";
+            this.button_restock.Size = new System.Drawing.Size(40, 40);
+            this.button_restock.TabIndex = 6;
+            this.button_restock.UseVisualStyleBackColor = true;
+            // 
+            // button_select
+            // 
+            this.button_select.BackgroundImage = global::MilkWholesaler.Properties.Resources.select;
+            this.button_select.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_select.Location = new System.Drawing.Point(47, 304);
+            this.button_select.Name = "button_select";
+            this.button_select.Size = new System.Drawing.Size(40, 40);
+            this.button_select.TabIndex = 3;
+            this.button_select.UseVisualStyleBackColor = true;
+            // 
+            // button_filter
+            // 
+            this.button_filter.BackgroundImage = global::MilkWholesaler.Properties.Resources.filter;
+            this.button_filter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_filter.Location = new System.Drawing.Point(47, 199);
+            this.button_filter.Name = "button_filter";
+            this.button_filter.Size = new System.Drawing.Size(40, 40);
+            this.button_filter.TabIndex = 2;
+            this.button_filter.UseVisualStyleBackColor = true;
+            // 
+            // button_search
+            // 
+            this.button_search.BackgroundImage = global::MilkWholesaler.Properties.Resources.search;
+            this.button_search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_search.Location = new System.Drawing.Point(47, 245);
+            this.button_search.Name = "button_search";
+            this.button_search.Size = new System.Drawing.Size(40, 40);
+            this.button_search.TabIndex = 1;
+            this.button_search.UseVisualStyleBackColor = true;
+            // 
+            // button_return
+            // 
+            this.button_return.BackgroundImage = global::MilkWholesaler.Properties.Resources._return;
+            this.button_return.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_return.Location = new System.Drawing.Point(763, 38);
+            this.button_return.Name = "button_return";
+            this.button_return.Size = new System.Drawing.Size(40, 40);
+            this.button_return.TabIndex = 0;
+            this.button_return.UseVisualStyleBackColor = true;
+            this.button_return.Click += new System.EventHandler(this.button_return_Click);
+            // 
+            // inventoryTableAdapter1
+            // 
+            this.inventoryTableAdapter1.ClearBeforeFill = true;
+            // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -365,9 +370,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.inventoryViewBindingNavigator)).EndInit();
             this.inventoryViewBindingNavigator.ResumeLayout(false);
             this.inventoryViewBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryViewDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryViewDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -406,5 +411,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private Milk_WholesalerDataSet1TableAdapters.InventoryTableAdapter inventoryTableAdapter1;
     }
 }
