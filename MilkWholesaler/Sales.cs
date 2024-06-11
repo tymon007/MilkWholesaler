@@ -43,9 +43,21 @@ namespace MilkWholesaler
                 if (!currentRow.IsStatusNull() && currentRow.Status != "Completed")
                 {
                     currentRow.Status = "Completed";
-                    //int quanity = milk_WholesalerDataSet1.SalesDetails.FindBySaleDetailID(currentRow.SaleDetailID).Quantity;
-                   // milk_WholesalerDataSet1.Inventory.AddInventoryRow(
-                    //    currentRow.ProductID, currentRow.Quantity, currentRow.SaleDate, currentRow.ClientID, currentRow.ClientName, currentRow.Details, currentRow.Status);
+
+                    int[] detailIDs = currentRow.SaleDetailIDs.Split(',').Select(int.Parse).ToArray();
+
+                    List<Milk_WholesalerDataSet1.SalesDetailsRow> saleDetails = new List<Milk_WholesalerDataSet1.SalesDetailsRow>();
+                    foreach (int detailID in detailIDs)
+                    {
+                        Milk_WholesalerDataSet1.SalesDetailsRow detailRow = milk_WholesalerDataSet1.SalesDetails.FindBySaleDetailID(detailID);
+                        saleDetails.Add(detailRow);
+                    }
+
+                    foreach (Milk_WholesalerDataSet1.SalesDetailsRow row in saleDetails)
+                    {
+
+                    }
+
                     tableAdapterManager.UpdateAll(milk_WholesalerDataSet1);
 
                     MessageBox.Show("Sale marked as completed.");
