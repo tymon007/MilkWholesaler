@@ -3034,6 +3034,10 @@ namespace MilkWholesaler {
             
             private global::System.Data.DataColumn columnUnitPrice;
             
+            private global::System.Data.DataColumn columnInventoryID;
+            
+            private global::System.Data.DataColumn columnProductID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public InventoryViewDataTable() {
@@ -3117,6 +3121,22 @@ namespace MilkWholesaler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn InventoryIDColumn {
+                get {
+                    return this.columnInventoryID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ProductIDColumn {
+                get {
+                    return this.columnProductID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3152,7 +3172,7 @@ namespace MilkWholesaler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public InventoryViewRow AddInventoryViewRow(string ProductName, int QuantityOnHand, System.DateTime ExpirationDate, string WarehouseLocation, string Description, decimal UnitPrice) {
+            public InventoryViewRow AddInventoryViewRow(string ProductName, int QuantityOnHand, System.DateTime ExpirationDate, string WarehouseLocation, string Description, decimal UnitPrice, int InventoryID, int ProductID) {
                 InventoryViewRow rowInventoryViewRow = ((InventoryViewRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ProductName,
@@ -3160,10 +3180,19 @@ namespace MilkWholesaler {
                         ExpirationDate,
                         WarehouseLocation,
                         Description,
-                        UnitPrice};
+                        UnitPrice,
+                        InventoryID,
+                        ProductID};
                 rowInventoryViewRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowInventoryViewRow);
                 return rowInventoryViewRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public InventoryViewRow FindByInventoryID(int InventoryID) {
+                return ((InventoryViewRow)(this.Rows.Find(new object[] {
+                            InventoryID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3189,6 +3218,8 @@ namespace MilkWholesaler {
                 this.columnWarehouseLocation = base.Columns["WarehouseLocation"];
                 this.columnDescription = base.Columns["Description"];
                 this.columnUnitPrice = base.Columns["UnitPrice"];
+                this.columnInventoryID = base.Columns["InventoryID"];
+                this.columnProductID = base.Columns["ProductID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3206,9 +3237,17 @@ namespace MilkWholesaler {
                 base.Columns.Add(this.columnDescription);
                 this.columnUnitPrice = new global::System.Data.DataColumn("UnitPrice", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUnitPrice);
+                this.columnInventoryID = new global::System.Data.DataColumn("InventoryID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInventoryID);
+                this.columnProductID = new global::System.Data.DataColumn("ProductID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProductID);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnInventoryID}, true));
                 this.columnProductName.MaxLength = 100;
                 this.columnWarehouseLocation.MaxLength = 100;
                 this.columnDescription.MaxLength = 255;
+                this.columnInventoryID.AllowDBNull = false;
+                this.columnInventoryID.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6293,6 +6332,33 @@ namespace MilkWholesaler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int InventoryID {
+                get {
+                    return ((int)(this[this.tableInventoryView.InventoryIDColumn]));
+                }
+                set {
+                    this[this.tableInventoryView.InventoryIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ProductID {
+                get {
+                    try {
+                        return ((int)(this[this.tableInventoryView.ProductIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ProductID\' in table \'InventoryView\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInventoryView.ProductIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsProductNameNull() {
                 return this.IsNull(this.tableInventoryView.ProductNameColumn);
             }
@@ -6361,6 +6427,18 @@ namespace MilkWholesaler {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetUnitPriceNull() {
                 this[this.tableInventoryView.UnitPriceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsProductIDNull() {
+                return this.IsNull(this.tableInventoryView.ProductIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetProductIDNull() {
+                this[this.tableInventoryView.ProductIDColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -10905,6 +10983,8 @@ SELECT SupplierID, SupplierName, ContactPerson, Phone, Email, Address FROM Suppl
             tableMapping.ColumnMappings.Add("WarehouseLocation", "WarehouseLocation");
             tableMapping.ColumnMappings.Add("Description", "Description");
             tableMapping.ColumnMappings.Add("UnitPrice", "UnitPrice");
+            tableMapping.ColumnMappings.Add("InventoryID", "InventoryID");
+            tableMapping.ColumnMappings.Add("ProductID", "ProductID");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -10922,7 +11002,7 @@ SELECT SupplierID, SupplierName, ContactPerson, Phone, Email, Address FROM Suppl
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ProductName, QuantityOnHand, ExpirationDate, WarehouseLocation, Descriptio" +
-                "n, UnitPrice FROM dbo.InventoryView";
+                "n, UnitPrice, InventoryID, ProductID FROM InventoryView";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
