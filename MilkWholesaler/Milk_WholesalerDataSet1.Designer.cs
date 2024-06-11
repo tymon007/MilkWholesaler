@@ -3397,6 +3397,12 @@ namespace MilkWholesaler {
             
             private global::System.Data.DataColumn columnSaleID;
             
+            private global::System.Data.DataColumn columnClientID;
+            
+            private global::System.Data.DataColumn columnSaleDetailIDs;
+            
+            private global::System.Data.DataColumn columnProductIDs;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public SalesViewDataTable() {
@@ -3496,6 +3502,30 @@ namespace MilkWholesaler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ClientIDColumn {
+                get {
+                    return this.columnClientID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SaleDetailIDsColumn {
+                get {
+                    return this.columnSaleDetailIDs;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ProductIDsColumn {
+                get {
+                    return this.columnProductIDs;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3531,7 +3561,7 @@ namespace MilkWholesaler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SalesViewRow AddSalesViewRow(string ClientName, string Address, string Phone, System.DateTime SaleDate, string Status, string Details, decimal TotalPrice, int SaleID) {
+            public SalesViewRow AddSalesViewRow(string ClientName, string Address, string Phone, System.DateTime SaleDate, string Status, string Details, decimal TotalPrice, int SaleID, int ClientID, string SaleDetailIDs, string ProductIDs) {
                 SalesViewRow rowSalesViewRow = ((SalesViewRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ClientName,
@@ -3541,7 +3571,10 @@ namespace MilkWholesaler {
                         Status,
                         Details,
                         TotalPrice,
-                        SaleID};
+                        SaleID,
+                        ClientID,
+                        SaleDetailIDs,
+                        ProductIDs};
                 rowSalesViewRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSalesViewRow);
                 return rowSalesViewRow;
@@ -3579,6 +3612,9 @@ namespace MilkWholesaler {
                 this.columnDetails = base.Columns["Details"];
                 this.columnTotalPrice = base.Columns["TotalPrice"];
                 this.columnSaleID = base.Columns["SaleID"];
+                this.columnClientID = base.Columns["ClientID"];
+                this.columnSaleDetailIDs = base.Columns["SaleDetailIDs"];
+                this.columnProductIDs = base.Columns["ProductIDs"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3600,6 +3636,12 @@ namespace MilkWholesaler {
                 base.Columns.Add(this.columnTotalPrice);
                 this.columnSaleID = new global::System.Data.DataColumn("SaleID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSaleID);
+                this.columnClientID = new global::System.Data.DataColumn("ClientID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnClientID);
+                this.columnSaleDetailIDs = new global::System.Data.DataColumn("SaleDetailIDs", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSaleDetailIDs);
+                this.columnProductIDs = new global::System.Data.DataColumn("ProductIDs", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProductIDs);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnSaleID}, true));
                 this.columnClientName.MaxLength = 100;
@@ -3609,6 +3651,9 @@ namespace MilkWholesaler {
                 this.columnDetails.MaxLength = 4000;
                 this.columnSaleID.AllowDBNull = false;
                 this.columnSaleID.Unique = true;
+                this.columnClientID.AllowDBNull = false;
+                this.columnSaleDetailIDs.MaxLength = 8000;
+                this.columnProductIDs.MaxLength = 8000;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4088,6 +4133,12 @@ namespace MilkWholesaler {
             
             private global::System.Data.DataColumn columnTotalPrice;
             
+            private global::System.Data.DataColumn columnSupplierID;
+            
+            private global::System.Data.DataColumn columnOrderDetailIDs;
+            
+            private global::System.Data.DataColumn columnProductIDs;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public OrdersViewDataTable() {
@@ -4187,6 +4238,30 @@ namespace MilkWholesaler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SupplierIDColumn {
+                get {
+                    return this.columnSupplierID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn OrderDetailIDsColumn {
+                get {
+                    return this.columnOrderDetailIDs;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ProductIDsColumn {
+                get {
+                    return this.columnProductIDs;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4222,7 +4297,7 @@ namespace MilkWholesaler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OrdersViewRow AddOrdersViewRow(string SupplierName, string ContactPerson, string Phone, int OrderID, System.DateTime OrderDate, string Status, string ProductDetails, decimal TotalPrice) {
+            public OrdersViewRow AddOrdersViewRow(string SupplierName, string ContactPerson, string Phone, int OrderID, System.DateTime OrderDate, string Status, string ProductDetails, decimal TotalPrice, int SupplierID, string OrderDetailIDs, string ProductIDs) {
                 OrdersViewRow rowOrdersViewRow = ((OrdersViewRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         SupplierName,
@@ -4232,7 +4307,10 @@ namespace MilkWholesaler {
                         OrderDate,
                         Status,
                         ProductDetails,
-                        TotalPrice};
+                        TotalPrice,
+                        SupplierID,
+                        OrderDetailIDs,
+                        ProductIDs};
                 rowOrdersViewRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowOrdersViewRow);
                 return rowOrdersViewRow;
@@ -4270,6 +4348,9 @@ namespace MilkWholesaler {
                 this.columnStatus = base.Columns["Status"];
                 this.columnProductDetails = base.Columns["ProductDetails"];
                 this.columnTotalPrice = base.Columns["TotalPrice"];
+                this.columnSupplierID = base.Columns["SupplierID"];
+                this.columnOrderDetailIDs = base.Columns["OrderDetailIDs"];
+                this.columnProductIDs = base.Columns["ProductIDs"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4291,6 +4372,12 @@ namespace MilkWholesaler {
                 base.Columns.Add(this.columnProductDetails);
                 this.columnTotalPrice = new global::System.Data.DataColumn("TotalPrice", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotalPrice);
+                this.columnSupplierID = new global::System.Data.DataColumn("SupplierID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSupplierID);
+                this.columnOrderDetailIDs = new global::System.Data.DataColumn("OrderDetailIDs", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOrderDetailIDs);
+                this.columnProductIDs = new global::System.Data.DataColumn("ProductIDs", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProductIDs);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnOrderID}, true));
                 this.columnSupplierName.MaxLength = 100;
@@ -4300,6 +4387,9 @@ namespace MilkWholesaler {
                 this.columnOrderID.Unique = true;
                 this.columnStatus.MaxLength = 50;
                 this.columnProductDetails.MaxLength = 4000;
+                this.columnSupplierID.AllowDBNull = false;
+                this.columnOrderDetailIDs.MaxLength = 8000;
+                this.columnProductIDs.MaxLength = 8000;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6581,6 +6671,49 @@ namespace MilkWholesaler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ClientID {
+                get {
+                    return ((int)(this[this.tableSalesView.ClientIDColumn]));
+                }
+                set {
+                    this[this.tableSalesView.ClientIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string SaleDetailIDs {
+                get {
+                    try {
+                        return ((string)(this[this.tableSalesView.SaleDetailIDsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SaleDetailIDs\' in table \'SalesView\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSalesView.SaleDetailIDsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ProductIDs {
+                get {
+                    try {
+                        return ((string)(this[this.tableSalesView.ProductIDsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ProductIDs\' in table \'SalesView\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSalesView.ProductIDsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsClientNameNull() {
                 return this.IsNull(this.tableSalesView.ClientNameColumn);
             }
@@ -6661,6 +6794,30 @@ namespace MilkWholesaler {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetTotalPriceNull() {
                 this[this.tableSalesView.TotalPriceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSaleDetailIDsNull() {
+                return this.IsNull(this.tableSalesView.SaleDetailIDsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSaleDetailIDsNull() {
+                this[this.tableSalesView.SaleDetailIDsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsProductIDsNull() {
+                return this.IsNull(this.tableSalesView.ProductIDsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetProductIDsNull() {
+                this[this.tableSalesView.ProductIDsColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -6969,6 +7126,49 @@ namespace MilkWholesaler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int SupplierID {
+                get {
+                    return ((int)(this[this.tableOrdersView.SupplierIDColumn]));
+                }
+                set {
+                    this[this.tableOrdersView.SupplierIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string OrderDetailIDs {
+                get {
+                    try {
+                        return ((string)(this[this.tableOrdersView.OrderDetailIDsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OrderDetailIDs\' in table \'OrdersView\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOrdersView.OrderDetailIDsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ProductIDs {
+                get {
+                    try {
+                        return ((string)(this[this.tableOrdersView.ProductIDsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ProductIDs\' in table \'OrdersView\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOrdersView.ProductIDsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsSupplierNameNull() {
                 return this.IsNull(this.tableOrdersView.SupplierNameColumn);
             }
@@ -7049,6 +7249,30 @@ namespace MilkWholesaler {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetTotalPriceNull() {
                 this[this.tableOrdersView.TotalPriceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsOrderDetailIDsNull() {
+                return this.IsNull(this.tableOrdersView.OrderDetailIDsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetOrderDetailIDsNull() {
+                this[this.tableOrdersView.OrderDetailIDsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsProductIDsNull() {
+                return this.IsNull(this.tableOrdersView.ProductIDsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetProductIDsNull() {
+                this[this.tableOrdersView.ProductIDsColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -11160,6 +11384,9 @@ SELECT SupplierID, SupplierName, ContactPerson, Phone, Email, Address FROM Suppl
             tableMapping.ColumnMappings.Add("Details", "Details");
             tableMapping.ColumnMappings.Add("TotalPrice", "TotalPrice");
             tableMapping.ColumnMappings.Add("SaleID", "SaleID");
+            tableMapping.ColumnMappings.Add("ClientID", "ClientID");
+            tableMapping.ColumnMappings.Add("SaleDetailIDs", "SaleDetailIDs");
+            tableMapping.ColumnMappings.Add("ProductIDs", "ProductIDs");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
@@ -11182,8 +11409,8 @@ SELECT SupplierID, SupplierName, ContactPerson, Phone, Email, Address FROM Suppl
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ClientName, Address, Phone, SaleDate, Status, Details, TotalPrice, SaleID " +
-                "FROM SalesView";
+            this._commandCollection[0].CommandText = "SELECT ClientName, Address, Phone, SaleDate, Status, Details, TotalPrice, SaleID," +
+                " ClientID, ProductIDs, SaleDetailIDs FROM SalesView";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -11543,6 +11770,9 @@ SELECT SupplierID, SupplierName, ContactPerson, Phone, Email, Address FROM Suppl
             tableMapping.ColumnMappings.Add("Status", "Status");
             tableMapping.ColumnMappings.Add("ProductDetails", "ProductDetails");
             tableMapping.ColumnMappings.Add("TotalPrice", "TotalPrice");
+            tableMapping.ColumnMappings.Add("SupplierID", "SupplierID");
+            tableMapping.ColumnMappings.Add("OrderDetailIDs", "OrderDetailIDs");
+            tableMapping.ColumnMappings.Add("ProductIDs", "ProductIDs");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
@@ -11566,7 +11796,7 @@ SELECT SupplierID, SupplierName, ContactPerson, Phone, Email, Address FROM Suppl
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT SupplierName, ContactPerson, Phone, OrderID, OrderDate, Status, ProductDet" +
-                "ails, TotalPrice FROM dbo.OrdersView";
+                "ails, TotalPrice, SupplierID, OrderDetailIDs, ProductIDs FROM OrdersView";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
