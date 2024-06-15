@@ -71,6 +71,8 @@
             this.button_return = new System.Windows.Forms.Button();
             this.button_restock = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.inventoryTableAdapter1 = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.InventoryTableAdapter();
+            this.orderDetailsTableAdapter1 = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.OrderDetailsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.ordersViewBindingNavigator)).BeginInit();
             this.ordersViewBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ordersViewBindingSource)).BeginInit();
@@ -133,8 +135,8 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(29, 22);
-            this.bindingNavigatorCountItem.Text = "z {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorDeleteItem
@@ -230,7 +232,9 @@
             this.dataGridViewTextBoxColumn8});
             this.ordersViewDataGridView.DataSource = this.ordersViewBindingSource;
             this.ordersViewDataGridView.Location = new System.Drawing.Point(64, 205);
+            this.ordersViewDataGridView.MultiSelect = false;
             this.ordersViewDataGridView.Name = "ordersViewDataGridView";
+            this.ordersViewDataGridView.ReadOnly = true;
             this.ordersViewDataGridView.Size = new System.Drawing.Size(744, 453);
             this.ordersViewDataGridView.TabIndex = 2;
             // 
@@ -464,6 +468,14 @@
             this.label3.TabIndex = 17;
             this.label3.Text = "Make an order:";
             // 
+            // inventoryTableAdapter1
+            // 
+            this.inventoryTableAdapter1.ClearBeforeFill = true;
+            // 
+            // orderDetailsTableAdapter1
+            // 
+            this.orderDetailsTableAdapter1.ClearBeforeFill = true;
+            // 
             // Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -519,13 +531,6 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton ordersViewBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView ordersViewDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productDetailsColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.Button button_complete;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button_filter;
@@ -541,5 +546,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button_restock;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productDetailsColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private Milk_WholesalerDataSet1TableAdapters.InventoryTableAdapter inventoryTableAdapter1;
+        private Milk_WholesalerDataSet1TableAdapters.OrderDetailsTableAdapter orderDetailsTableAdapter1;
     }
 }

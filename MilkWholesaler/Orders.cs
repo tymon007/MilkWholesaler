@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MilkWholesaler.Milk_WholesalerDataSet1TableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -46,6 +47,9 @@ namespace MilkWholesaler
 
         private void button_complete_Click(object sender, EventArgs e)
         {
+            orderDetailsTableAdapter1.Fill(milk_WholesalerDataSet1.OrderDetails);
+            inventoryTableAdapter1.Fill(milk_WholesalerDataSet1.Inventory);
+
             if (ordersViewBindingSource.Current != null)
             {
                 DataRowView currentRowView = (DataRowView)ordersViewBindingSource.Current;
@@ -55,6 +59,28 @@ namespace MilkWholesaler
                 {
                     currentRow.Status = "Completed";
 
+                    int[] detailIDs = currentRow.OrderDetailIDs.Split(',').Select(int.Parse).ToArray();
+
+                    List<Milk_WholesalerDataSet1.OrderDetailsRow> orderDetails = new List<Milk_WholesalerDataSet1.OrderDetailsRow>();
+                    foreach (int detailID in detailIDs)
+                    {
+                        Milk_WholesalerDataSet1.OrderDetailsRow detailRow = milk_WholesalerDataSet1.OrderDetails.FindByOrderDetailID(detailID);
+                        if (detailRow != null)
+                        {
+                            orderDetails.Add(detailRow);
+                        }
+                    }
+                    foreach (Milk_WholesalerDataSet1.OrderDetailsRow row in orderDetails)
+                    {
+                        var invRows = milk_WholesalerDataSet1.Inventory.Select($"ProductID = {row.ProductID}");
+                        if (invRows.Length > 0)
+                        {
+                            Milk_WholesalerDataSet1.InventoryRow invRow = (Milk_WholesalerDataSet1.InventoryRow)invRows[0];
+                            invRow.QuantityOnHand += row.Quantity;
+                        }
+                    }
+
+                    inventoryTableAdapter1.Update(milk_WholesalerDataSet1.Inventory);
                     tableAdapterManager.UpdateAll(milk_WholesalerDataSet1);
 
                     MessageBox.Show("Order marked as completed.");

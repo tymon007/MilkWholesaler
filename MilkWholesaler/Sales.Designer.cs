@@ -55,8 +55,6 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button_complete = new System.Windows.Forms.Button();
             this.button_return = new System.Windows.Forms.Button();
-            this.salesViewTableAdapter = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.SalesViewTableAdapter();
-            this.tableAdapterManager = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton_name = new System.Windows.Forms.RadioButton();
@@ -69,6 +67,10 @@
             this.dateTimePicker_greater = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.button_filter = new System.Windows.Forms.Button();
+            this.salesViewTableAdapter = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.SalesViewTableAdapter();
+            this.tableAdapterManager = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager();
+            this.inventoryTableAdapter1 = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.InventoryTableAdapter();
+            this.salesDetailsTableAdapter1 = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.SalesDetailsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.salesViewBindingNavigator)).BeginInit();
             this.salesViewBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salesViewBindingSource)).BeginInit();
@@ -227,7 +229,9 @@
             this.dataGridViewTextBoxColumn7});
             this.salesViewDataGridView.DataSource = this.salesViewBindingSource;
             this.salesViewDataGridView.Location = new System.Drawing.Point(53, 161);
+            this.salesViewDataGridView.MultiSelect = false;
             this.salesViewDataGridView.Name = "salesViewDataGridView";
+            this.salesViewDataGridView.ReadOnly = true;
             this.salesViewDataGridView.Size = new System.Drawing.Size(743, 312);
             this.salesViewDataGridView.TabIndex = 3;
             // 
@@ -294,25 +298,6 @@
             this.button_return.TabIndex = 2;
             this.button_return.UseVisualStyleBackColor = true;
             this.button_return.Click += new System.EventHandler(this.button_return_Click);
-            // 
-            // salesViewTableAdapter
-            // 
-            this.salesViewTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ClientsTableAdapter = null;
-            this.tableAdapterManager.InventoryTableAdapter = null;
-            this.tableAdapterManager.OffersTableAdapter = null;
-            this.tableAdapterManager.OrderDetailsTableAdapter = null;
-            this.tableAdapterManager.OrdersTableAdapter = null;
-            this.tableAdapterManager.ProductsTableAdapter = null;
-            this.tableAdapterManager.SalesDetailsTableAdapter = null;
-            this.tableAdapterManager.SalesTableAdapter = null;
-            this.tableAdapterManager.SalesViewTableAdapter = this.salesViewTableAdapter;
-            this.tableAdapterManager.SuppliersTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // label1
             // 
@@ -440,6 +425,34 @@
             this.button_filter.UseVisualStyleBackColor = true;
             this.button_filter.Click += new System.EventHandler(this.button_filter_Click);
             // 
+            // salesViewTableAdapter
+            // 
+            this.salesViewTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ClientsTableAdapter = null;
+            this.tableAdapterManager.InventoryTableAdapter = this.inventoryTableAdapter1;
+            this.tableAdapterManager.OffersTableAdapter = null;
+            this.tableAdapterManager.OrderDetailsTableAdapter = null;
+            this.tableAdapterManager.OrdersTableAdapter = null;
+            this.tableAdapterManager.OrdersViewTableAdapter = null;
+            this.tableAdapterManager.ProductsTableAdapter = null;
+            this.tableAdapterManager.SalesDetailsTableAdapter = this.salesDetailsTableAdapter1;
+            this.tableAdapterManager.SalesTableAdapter = null;
+            this.tableAdapterManager.SalesViewTableAdapter = this.salesViewTableAdapter;
+            this.tableAdapterManager.SuppliersTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // inventoryTableAdapter1
+            // 
+            this.inventoryTableAdapter1.ClearBeforeFill = true;
+            // 
+            // salesDetailsTableAdapter1
+            // 
+            this.salesDetailsTableAdapter1.ClearBeforeFill = true;
+            // 
             // Sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -513,5 +526,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker_greater;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button_filter;
+        private Milk_WholesalerDataSet1TableAdapters.InventoryTableAdapter inventoryTableAdapter1;
+        private Milk_WholesalerDataSet1TableAdapters.SalesDetailsTableAdapter salesDetailsTableAdapter1;
     }
 }

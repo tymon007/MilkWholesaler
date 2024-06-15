@@ -224,7 +224,9 @@
             this.Price});
             this.offersViewDataGridView.DataSource = this.offersViewBindingSource;
             this.offersViewDataGridView.Location = new System.Drawing.Point(255, 87);
+            this.offersViewDataGridView.MultiSelect = false;
             this.offersViewDataGridView.Name = "offersViewDataGridView";
+            this.offersViewDataGridView.ReadOnly = true;
             this.offersViewDataGridView.Size = new System.Drawing.Size(343, 351);
             this.offersViewDataGridView.TabIndex = 1;
             // 
@@ -233,12 +235,14 @@
             this.Product.DataPropertyName = "ProductName";
             this.Product.HeaderText = "ProductName";
             this.Product.Name = "Product";
+            this.Product.ReadOnly = true;
             // 
             // OfferID
             // 
             this.OfferID.DataPropertyName = "OfferID";
             this.OfferID.HeaderText = "Column1";
             this.OfferID.Name = "OfferID";
+            this.OfferID.ReadOnly = true;
             this.OfferID.Visible = false;
             // 
             // ProductID
@@ -246,6 +250,7 @@
             this.ProductID.DataPropertyName = "ProductID";
             this.ProductID.HeaderText = "ProductID";
             this.ProductID.Name = "ProductID";
+            this.ProductID.ReadOnly = true;
             this.ProductID.Visible = false;
             // 
             // SupplierID
@@ -253,6 +258,7 @@
             this.SupplierID.DataPropertyName = "SupplierID";
             this.SupplierID.HeaderText = "SupplierID";
             this.SupplierID.Name = "SupplierID";
+            this.SupplierID.ReadOnly = true;
             this.SupplierID.Visible = false;
             // 
             // Supplier
@@ -260,12 +266,14 @@
             this.Supplier.DataPropertyName = "SupplierName";
             this.Supplier.HeaderText = "SupplierName";
             this.Supplier.Name = "Supplier";
+            this.Supplier.ReadOnly = true;
             // 
             // Price
             // 
             this.Price.DataPropertyName = "SupplierPrice";
             this.Price.HeaderText = "SupplierPrice";
             this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
             // 
             // textBox_search
             // 
