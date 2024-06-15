@@ -30,6 +30,7 @@ namespace MilkWholesaler
             colorTimer.Tick += ColorTimer_Tick;
             colorTimer.Start();
             AddRemoveButtonColumn();
+            ApplyExpirationColorCoding();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -41,15 +42,29 @@ namespace MilkWholesaler
         {
             if (e.RowIndex >= 0 && inventoryViewDataGridView.Columns[e.ColumnIndex].Name == "Remove")
             {
-                var result = MessageBox.Show("Are you sure you want to remove this expired milk?", "Confirmation", MessageBoxButtons.YesNo);
+                var result = MessageBox.Show("Are you sure you want to remove this expired product?", "Confirmation", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
-                    inventoryViewBindingSource.Remove(e.RowIndex);
-                    //inventoryViewDataGridView.Rows.RemoveAt(e.RowIndex);
+
+
+                    int rowID = (int)inventoryViewDataGridView.Rows[e.RowIndex].Cells["InventoryID"].Value;
+                    DataGridViewRow row = inventoryViewDataGridView.Rows[rowID-1];
+
+
+                    string columnName3 = "dataGridViewTextBoxColumn2";
+                    string columnName4 = "dataGridViewTextBoxColumn3";
+                    string columnName5 = "dataGridViewTextBoxColumn4";
+
+                    int quantityOnHand = (int)row.Cells[columnName3].Value; 
+                    DateTime expirationDate = (DateTime)row.Cells[columnName4].Value; 
+                    string warehouseLocation = (string)row.Cells[columnName5].Value;
+
+                    DateTime myDateTime = new DateTime(2025, 1, 1);
+                    inventoryTableAdapter1.Delete(rowID, rowID, quantityOnHand, expirationDate, warehouseLocation);
                     this.inventoryViewTableAdapter.Fill(this.milk_WholesalerDataSet1.InventoryView);
                 }
             }
-            else if( e.RowIndex >= 0 && inventoryViewDataGridView.Columns[e.ColumnIndex].Name == "Restock" )
+            else if (e.RowIndex >= 0 && inventoryViewDataGridView.Columns[e.ColumnIndex].Name == "Restock")
             {
                 string productName = inventoryViewDataGridView.Rows[e.RowIndex].Cells["ProductName"].Value.ToString();
                 Form restock = new Restock(productName);
@@ -90,16 +105,18 @@ namespace MilkWholesaler
 
         private void AddRemoveButtonColumn()
         {
-            DataGridViewButtonColumn removeButtonColumn = new DataGridViewButtonColumn
+            if (inventoryViewDataGridView.Columns["Remove"] == null)
             {
-                Name = "Remove",
-                Text = "Remove",
-                UseColumnTextForButtonValue = true,
-                HeaderText = "Actions"
-            };
+                DataGridViewButtonColumn removeButtonColumn = new DataGridViewButtonColumn
+                {
+                    Name = "Remove",
+                    Text = "Remove",
+                    UseColumnTextForButtonValue = true,
+                    HeaderText = "Actions"
+                };
 
-            inventoryViewDataGridView.Columns.Add(removeButtonColumn);
-            //inventoryViewDataGridView.CellContentClick += new DataGridViewCellEventHandler(inventoryViewDataGridView_CellContentClick);
+                inventoryViewDataGridView.Columns.Add(removeButtonColumn);
+            }
         }
     }
 }

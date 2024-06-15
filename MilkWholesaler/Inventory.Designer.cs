@@ -46,15 +46,6 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.inventoryViewBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.inventoryViewDataGridView = new System.Windows.Forms.DataGridView();
-            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Restock = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inventoryViewTableAdapter = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.InventoryViewTableAdapter();
-            this.tableAdapterManager = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button_restock = new System.Windows.Forms.Button();
             this.button_select = new System.Windows.Forms.Button();
@@ -62,6 +53,17 @@
             this.button_search = new System.Windows.Forms.Button();
             this.button_return = new System.Windows.Forms.Button();
             this.inventoryTableAdapter1 = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.InventoryTableAdapter();
+            this.inventoryViewTableAdapter = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.InventoryViewTableAdapter();
+            this.tableAdapterManager = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InventoryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Restock = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryViewBindingNavigator)).BeginInit();
             this.inventoryViewBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryViewBindingSource)).BeginInit();
@@ -210,6 +212,8 @@
             this.inventoryViewDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.inventoryViewDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ProductName,
+            this.InventoryID,
+            this.ProductID,
             this.Restock,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
@@ -222,71 +226,6 @@
             this.inventoryViewDataGridView.Size = new System.Drawing.Size(746, 220);
             this.inventoryViewDataGridView.TabIndex = 5;
             this.inventoryViewDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.inventoryViewDataGridView_CellContentClick);
-            // 
-            // ProductName
-            // 
-            this.ProductName.DataPropertyName = "ProductName";
-            this.ProductName.HeaderText = "ProductName";
-            this.ProductName.Name = "ProductName";
-            // 
-            // Restock
-            // 
-            this.Restock.HeaderText = "Restock";
-            this.Restock.Name = "Restock";
-            this.Restock.Text = "Restock";
-            this.Restock.ToolTipText = "Restock";
-            this.Restock.UseColumnTextForButtonValue = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "QuantityOnHand";
-            this.dataGridViewTextBoxColumn2.HeaderText = "QuantityOnHand";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "ExpirationDate";
-            this.dataGridViewTextBoxColumn3.HeaderText = "ExpirationDate";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "WarehouseLocation";
-            this.dataGridViewTextBoxColumn4.HeaderText = "WarehouseLocation";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Description";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Description";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "UnitPrice";
-            this.dataGridViewTextBoxColumn6.HeaderText = "UnitPrice";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // inventoryViewTableAdapter
-            // 
-            this.inventoryViewTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ClientsTableAdapter = null;
-            this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.InventoryTableAdapter = null;
-            this.tableAdapterManager.OffersTableAdapter = null;
-            this.tableAdapterManager.OrderDetailsTableAdapter = null;
-            this.tableAdapterManager.OrdersTableAdapter = null;
-            this.tableAdapterManager.OrdersViewTableAdapter = null;
-            this.tableAdapterManager.ProductsTableAdapter = null;
-            this.tableAdapterManager.SalesDetailsTableAdapter = null;
-            this.tableAdapterManager.SalesTableAdapter = null;
-            this.tableAdapterManager.SalesViewTableAdapter = null;
-            this.tableAdapterManager.SuppliersTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // textBox1
             // 
@@ -351,6 +290,86 @@
             // 
             this.inventoryTableAdapter1.ClearBeforeFill = true;
             // 
+            // inventoryViewTableAdapter
+            // 
+            this.inventoryViewTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ClientsTableAdapter = null;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.InventoryTableAdapter = null;
+            this.tableAdapterManager.InventoryViewTableAdapter = null;
+            this.tableAdapterManager.OffersTableAdapter = null;
+            this.tableAdapterManager.OrderDetailsTableAdapter = null;
+            this.tableAdapterManager.OrdersTableAdapter = null;
+            this.tableAdapterManager.OrdersViewTableAdapter = null;
+            this.tableAdapterManager.ProductsTableAdapter = null;
+            this.tableAdapterManager.SalesDetailsTableAdapter = null;
+            this.tableAdapterManager.SalesTableAdapter = null;
+            this.tableAdapterManager.SalesViewTableAdapter = null;
+            this.tableAdapterManager.SuppliersTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // ProductName
+            // 
+            this.ProductName.DataPropertyName = "ProductName";
+            this.ProductName.HeaderText = "ProductName";
+            this.ProductName.Name = "ProductName";
+            // 
+            // InventoryID
+            // 
+            this.InventoryID.DataPropertyName = "InventoryID";
+            this.InventoryID.HeaderText = "InventoryID";
+            this.InventoryID.Name = "InventoryID";
+            this.InventoryID.Visible = false;
+            // 
+            // ProductID
+            // 
+            this.ProductID.DataPropertyName = "ProductID";
+            this.ProductID.HeaderText = "ProductID";
+            this.ProductID.Name = "ProductID";
+            this.ProductID.Visible = false;
+            // 
+            // Restock
+            // 
+            this.Restock.HeaderText = "Restock";
+            this.Restock.Name = "Restock";
+            this.Restock.Text = "Restock";
+            this.Restock.ToolTipText = "Restock";
+            this.Restock.UseColumnTextForButtonValue = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "QuantityOnHand";
+            this.dataGridViewTextBoxColumn2.HeaderText = "QuantityOnHand";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "ExpirationDate";
+            this.dataGridViewTextBoxColumn3.HeaderText = "ExpirationDate";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "WarehouseLocation";
+            this.dataGridViewTextBoxColumn4.HeaderText = "WarehouseLocation";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Description";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Description";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "UnitPrice";
+            this.dataGridViewTextBoxColumn6.HeaderText = "UnitPrice";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -404,13 +423,15 @@
         private System.Windows.Forms.DataGridView inventoryViewDataGridView;
         private System.Windows.Forms.Button button_restock;
         private System.Windows.Forms.TextBox textBox1;
+        private Milk_WholesalerDataSet1TableAdapters.InventoryTableAdapter inventoryTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InventoryID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductID;
         private System.Windows.Forms.DataGridViewButtonColumn Restock;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private Milk_WholesalerDataSet1TableAdapters.InventoryTableAdapter inventoryTableAdapter1;
     }
 }
