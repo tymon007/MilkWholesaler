@@ -232,7 +232,9 @@
             this.dataGridViewTextBoxColumn8});
             this.ordersViewDataGridView.DataSource = this.ordersViewBindingSource;
             this.ordersViewDataGridView.Location = new System.Drawing.Point(64, 205);
+            this.ordersViewDataGridView.MultiSelect = false;
             this.ordersViewDataGridView.Name = "ordersViewDataGridView";
+            this.ordersViewDataGridView.ReadOnly = true;
             this.ordersViewDataGridView.Size = new System.Drawing.Size(744, 453);
             this.ordersViewDataGridView.TabIndex = 2;
             // 

@@ -229,7 +229,9 @@
             this.dataGridViewTextBoxColumn7});
             this.salesViewDataGridView.DataSource = this.salesViewBindingSource;
             this.salesViewDataGridView.Location = new System.Drawing.Point(53, 161);
+            this.salesViewDataGridView.MultiSelect = false;
             this.salesViewDataGridView.Name = "salesViewDataGridView";
+            this.salesViewDataGridView.ReadOnly = true;
             this.salesViewDataGridView.Size = new System.Drawing.Size(743, 312);
             this.salesViewDataGridView.TabIndex = 3;
             // 

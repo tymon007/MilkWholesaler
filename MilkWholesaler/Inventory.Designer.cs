@@ -46,15 +46,6 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.inventoryViewBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.inventoryViewDataGridView = new System.Windows.Forms.DataGridView();
-            this.inventoryViewTableAdapter = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.InventoryViewTableAdapter();
-            this.tableAdapterManager = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button_restock = new System.Windows.Forms.Button();
-            this.button_select = new System.Windows.Forms.Button();
-            this.button_filter = new System.Windows.Forms.Button();
-            this.button_search = new System.Windows.Forms.Button();
-            this.button_return = new System.Windows.Forms.Button();
-            this.inventoryTableAdapter1 = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.InventoryTableAdapter();
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.InventoryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,6 +55,15 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inventoryViewTableAdapter = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.InventoryViewTableAdapter();
+            this.tableAdapterManager = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button_restock = new System.Windows.Forms.Button();
+            this.button_select = new System.Windows.Forms.Button();
+            this.button_filter = new System.Windows.Forms.Button();
+            this.button_search = new System.Windows.Forms.Button();
+            this.button_return = new System.Windows.Forms.Button();
+            this.inventoryTableAdapter1 = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.InventoryTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryViewBindingNavigator)).BeginInit();
             this.inventoryViewBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryViewBindingSource)).BeginInit();
@@ -222,10 +222,79 @@
             this.dataGridViewTextBoxColumn6});
             this.inventoryViewDataGridView.DataSource = this.inventoryViewBindingSource;
             this.inventoryViewDataGridView.Location = new System.Drawing.Point(102, 177);
+            this.inventoryViewDataGridView.MultiSelect = false;
             this.inventoryViewDataGridView.Name = "inventoryViewDataGridView";
+            this.inventoryViewDataGridView.ReadOnly = true;
             this.inventoryViewDataGridView.Size = new System.Drawing.Size(746, 220);
             this.inventoryViewDataGridView.TabIndex = 5;
             this.inventoryViewDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.inventoryViewDataGridView_CellContentClick);
+            // 
+            // ProductName
+            // 
+            this.ProductName.DataPropertyName = "ProductName";
+            this.ProductName.HeaderText = "ProductName";
+            this.ProductName.Name = "ProductName";
+            this.ProductName.ReadOnly = true;
+            // 
+            // InventoryID
+            // 
+            this.InventoryID.DataPropertyName = "InventoryID";
+            this.InventoryID.HeaderText = "InventoryID";
+            this.InventoryID.Name = "InventoryID";
+            this.InventoryID.ReadOnly = true;
+            this.InventoryID.Visible = false;
+            // 
+            // ProductID
+            // 
+            this.ProductID.DataPropertyName = "ProductID";
+            this.ProductID.HeaderText = "ProductID";
+            this.ProductID.Name = "ProductID";
+            this.ProductID.ReadOnly = true;
+            this.ProductID.Visible = false;
+            // 
+            // Restock
+            // 
+            this.Restock.HeaderText = "Restock";
+            this.Restock.Name = "Restock";
+            this.Restock.ReadOnly = true;
+            this.Restock.Text = "Restock";
+            this.Restock.ToolTipText = "Restock";
+            this.Restock.UseColumnTextForButtonValue = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "QuantityOnHand";
+            this.dataGridViewTextBoxColumn2.HeaderText = "QuantityOnHand";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "ExpirationDate";
+            this.dataGridViewTextBoxColumn3.HeaderText = "ExpirationDate";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "WarehouseLocation";
+            this.dataGridViewTextBoxColumn4.HeaderText = "WarehouseLocation";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Description";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Description";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "UnitPrice";
+            this.dataGridViewTextBoxColumn6.HeaderText = "UnitPrice";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // inventoryViewTableAdapter
             // 
@@ -310,64 +379,6 @@
             // inventoryTableAdapter1
             // 
             this.inventoryTableAdapter1.ClearBeforeFill = true;
-            // 
-            // ProductName
-            // 
-            this.ProductName.DataPropertyName = "ProductName";
-            this.ProductName.HeaderText = "ProductName";
-            this.ProductName.Name = "ProductName";
-            // 
-            // InventoryID
-            // 
-            this.InventoryID.DataPropertyName = "InventoryID";
-            this.InventoryID.HeaderText = "InventoryID";
-            this.InventoryID.Name = "InventoryID";
-            this.InventoryID.Visible = false;
-            // 
-            // ProductID
-            // 
-            this.ProductID.DataPropertyName = "ProductID";
-            this.ProductID.HeaderText = "ProductID";
-            this.ProductID.Name = "ProductID";
-            this.ProductID.Visible = false;
-            // 
-            // Restock
-            // 
-            this.Restock.HeaderText = "Restock";
-            this.Restock.Name = "Restock";
-            this.Restock.Text = "Restock";
-            this.Restock.ToolTipText = "Restock";
-            this.Restock.UseColumnTextForButtonValue = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "QuantityOnHand";
-            this.dataGridViewTextBoxColumn2.HeaderText = "QuantityOnHand";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "ExpirationDate";
-            this.dataGridViewTextBoxColumn3.HeaderText = "ExpirationDate";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "WarehouseLocation";
-            this.dataGridViewTextBoxColumn4.HeaderText = "WarehouseLocation";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Description";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Description";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "UnitPrice";
-            this.dataGridViewTextBoxColumn6.HeaderText = "UnitPrice";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // Inventory
             // 
