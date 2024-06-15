@@ -7,11 +7,11 @@
 <DiagramLayout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ex:showrelationlabel="False" ViewPortX="-10" ViewPortY="60" xmlns:ex="urn:schemas-microsoft-com:xml-msdatasource-layout-extended" xmlns="urn:schemas-microsoft-com:xml-msdatasource-layout">
   <Shapes>
     <Shape ID="DesignTable:Clients" ZOrder="22" X="888" Y="790" Height="191" Width="183" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
-    <Shape ID="DesignTable:Inventory" ZOrder="1" X="336" Y="70" Height="172" Width="201" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
+    <Shape ID="DesignTable:Inventory" ZOrder="1" X="336" Y="70" Height="191" Width="206" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="121" />
     <Shape ID="DesignTable:Offers" ZOrder="21" X="335" Y="310" Height="153" Width="180" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="102" />
     <Shape ID="DesignTable:Products" ZOrder="20" X="2" Y="219" Height="153" Width="196" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="102" />
-    <Shape ID="DesignTable:Sales" ZOrder="19" X="620" Y="808" Height="172" Width="174" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="121" />
-    <Shape ID="DesignTable:SalesDetails" ZOrder="18" X="300" Y="799" Height="191" Width="213" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
+    <Shape ID="DesignTable:Sales" ZOrder="19" X="603" Y="800" Height="172" Width="174" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="121" />
+    <Shape ID="DesignTable:SalesDetails" ZOrder="18" X="216" Y="783" Height="191" Width="213" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
     <Shape ID="DesignTable:Suppliers" ZOrder="17" X="586" Y="312" Height="191" Width="198" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
     <Shape ID="DesignTable:InventoryView" ZOrder="16" X="984" Y="215" Height="229" Width="229" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="178" />
     <Shape ID="DesignTable:SalesView" ZOrder="9" X="1289" Y="223" Height="286" Width="202" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="235" />
@@ -25,11 +25,11 @@
       <RoutePoints>
         <Point>
           <X>198</X>
-          <Y>230</Y>
+          <Y>221</Y>
         </Point>
         <Point>
           <X>336</X>
-          <Y>230</Y>
+          <Y>221</Y>
         </Point>
       </RoutePoints>
     </Connector>
@@ -65,11 +65,11 @@
       <RoutePoints>
         <Point>
           <X>888</X>
-          <Y>850</Y>
+          <Y>842</Y>
         </Point>
         <Point>
-          <X>794</X>
-          <Y>850</Y>
+          <X>777</X>
+          <Y>842</Y>
         </Point>
       </RoutePoints>
     </Connector>
@@ -81,23 +81,23 @@
         </Point>
         <Point>
           <X>165</X>
-          <Y>816</Y>
+          <Y>800</Y>
         </Point>
         <Point>
-          <X>300</X>
-          <Y>816</Y>
+          <X>216</X>
+          <Y>800</Y>
         </Point>
       </RoutePoints>
     </Connector>
     <Connector ID="DesignRelation:FK__SalesDeta__SaleI__3C69FB99" ZOrder="10" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>620</X>
-          <Y>859</Y>
+          <X>603</X>
+          <Y>835</Y>
         </Point>
         <Point>
-          <X>513</X>
-          <Y>859</Y>
+          <X>429</X>
+          <Y>835</Y>
         </Point>
       </RoutePoints>
     </Connector>

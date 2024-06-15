@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sales));
             this.salesViewBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.salesViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.milk_WholesalerDataSet1 = new MilkWholesaler.Milk_WholesalerDataSet1();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -44,6 +46,13 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.salesViewBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.salesViewDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button_complete = new System.Windows.Forms.Button();
             this.button_return = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,25 +67,17 @@
             this.dateTimePicker_greater = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.button_filter = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salesViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.milk_WholesalerDataSet1 = new MilkWholesaler.Milk_WholesalerDataSet1();
             this.salesViewTableAdapter = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.SalesViewTableAdapter();
             this.tableAdapterManager = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager();
             this.inventoryTableAdapter1 = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.InventoryTableAdapter();
+            this.salesDetailsTableAdapter1 = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.SalesDetailsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.salesViewBindingNavigator)).BeginInit();
             this.salesViewBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.salesViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesViewDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.salesViewBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // salesViewBindingNavigator
@@ -117,6 +118,16 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // salesViewBindingSource
+            // 
+            this.salesViewBindingSource.DataMember = "SalesView";
+            this.salesViewBindingSource.DataSource = this.milk_WholesalerDataSet1;
+            // 
+            // milk_WholesalerDataSet1
+            // 
+            this.milk_WholesalerDataSet1.DataSetName = "Milk_WholesalerDataSet1";
+            this.milk_WholesalerDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -221,6 +232,48 @@
             this.salesViewDataGridView.Name = "salesViewDataGridView";
             this.salesViewDataGridView.Size = new System.Drawing.Size(743, 312);
             this.salesViewDataGridView.TabIndex = 3;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ClientName";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ClientName";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Address";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Address";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Phone";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Phone";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "SaleDate";
+            this.dataGridViewTextBoxColumn4.HeaderText = "SaleDate";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Status";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Status";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Details";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Details";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "TotalPrice";
+            this.dataGridViewTextBoxColumn7.HeaderText = "TotalPrice";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
             // button_complete
             // 
@@ -370,58 +423,6 @@
             this.button_filter.UseVisualStyleBackColor = true;
             this.button_filter.Click += new System.EventHandler(this.button_filter_Click);
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ClientName";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ClientName";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Address";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Address";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Phone";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Phone";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "SaleDate";
-            this.dataGridViewTextBoxColumn4.HeaderText = "SaleDate";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Status";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Status";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Details";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Details";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "TotalPrice";
-            this.dataGridViewTextBoxColumn7.HeaderText = "TotalPrice";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // salesViewBindingSource
-            // 
-            this.salesViewBindingSource.DataMember = "SalesView";
-            this.salesViewBindingSource.DataSource = this.milk_WholesalerDataSet1;
-            // 
-            // milk_WholesalerDataSet1
-            // 
-            this.milk_WholesalerDataSet1.DataSetName = "Milk_WholesalerDataSet1";
-            this.milk_WholesalerDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // salesViewTableAdapter
             // 
             this.salesViewTableAdapter.ClearBeforeFill = true;
@@ -430,13 +431,13 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.ClientsTableAdapter = null;
-            this.tableAdapterManager.InventoryTableAdapter = null;
+            this.tableAdapterManager.InventoryTableAdapter = this.inventoryTableAdapter1;
             this.tableAdapterManager.OffersTableAdapter = null;
             this.tableAdapterManager.OrderDetailsTableAdapter = null;
             this.tableAdapterManager.OrdersTableAdapter = null;
             this.tableAdapterManager.OrdersViewTableAdapter = null;
             this.tableAdapterManager.ProductsTableAdapter = null;
-            this.tableAdapterManager.SalesDetailsTableAdapter = null;
+            this.tableAdapterManager.SalesDetailsTableAdapter = this.salesDetailsTableAdapter1;
             this.tableAdapterManager.SalesTableAdapter = null;
             this.tableAdapterManager.SalesViewTableAdapter = this.salesViewTableAdapter;
             this.tableAdapterManager.SuppliersTableAdapter = null;
@@ -445,6 +446,10 @@
             // inventoryTableAdapter1
             // 
             this.inventoryTableAdapter1.ClearBeforeFill = true;
+            // 
+            // salesDetailsTableAdapter1
+            // 
+            this.salesDetailsTableAdapter1.ClearBeforeFill = true;
             // 
             // Sales
             // 
@@ -466,13 +471,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.salesViewBindingNavigator)).EndInit();
             this.salesViewBindingNavigator.ResumeLayout(false);
             this.salesViewBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.salesViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesViewDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.salesViewBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.milk_WholesalerDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -520,5 +525,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button_filter;
         private Milk_WholesalerDataSet1TableAdapters.InventoryTableAdapter inventoryTableAdapter1;
+        private Milk_WholesalerDataSet1TableAdapters.SalesDetailsTableAdapter salesDetailsTableAdapter1;
     }
 }
