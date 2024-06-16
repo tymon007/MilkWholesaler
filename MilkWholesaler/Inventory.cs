@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MilkWholesaler.Milk_WholesalerDataSet1TableAdapters;
+using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
@@ -45,22 +46,31 @@ namespace MilkWholesaler
                 var result = MessageBox.Show("Are you sure you want to remove this expired product?", "Confirmation", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
+                    inventoryTableAdapter1.Fill(milk_WholesalerDataSet1.Inventory);
+
+                    DataRowView currentRowView = (DataRowView)inventoryViewBindingSource.Current;
+                    Milk_WholesalerDataSet1.InventoryViewRow currentRow = (Milk_WholesalerDataSet1.InventoryViewRow)currentRowView.Row;
+
+                    var invRow = milk_WholesalerDataSet1.Inventory.Select($"InventoryID = {currentRow.InventoryID}");
+                    if (invRow.Length > 0)
+                    {
+                        invRow[0].Delete();
+                    }
+                    //int rowID = (int)inventoryViewDataGridView.Rows[e.RowIndex].Cells["InventoryID"].Value;
+                    //DataGridViewRow row = inventoryViewDataGridView.Rows[rowID-1];
 
 
-                    int rowID = (int)inventoryViewDataGridView.Rows[e.RowIndex].Cells["InventoryID"].Value;
-                    DataGridViewRow row = inventoryViewDataGridView.Rows[rowID-1];
+                    //string columnName3 = "dataGridViewTextBoxColumn2";
+                    //string columnName4 = "dataGridViewTextBoxColumn3";
+                    //string columnName5 = "dataGridViewTextBoxColumn4";
 
+                    //int quantityOnHand = (int)row.Cells[columnName3].Value; 
+                    //DateTime expirationDate = (DateTime)row.Cells[columnName4].Value; 
+                    //string warehouseLocation = (string)row.Cells[columnName5].Value;
 
-                    string columnName3 = "dataGridViewTextBoxColumn2";
-                    string columnName4 = "dataGridViewTextBoxColumn3";
-                    string columnName5 = "dataGridViewTextBoxColumn4";
-
-                    int quantityOnHand = (int)row.Cells[columnName3].Value; 
-                    DateTime expirationDate = (DateTime)row.Cells[columnName4].Value; 
-                    string warehouseLocation = (string)row.Cells[columnName5].Value;
-
-                    DateTime myDateTime = new DateTime(2025, 1, 1);
-                    inventoryTableAdapter1.Delete(rowID, rowID, quantityOnHand, expirationDate, warehouseLocation);
+                    //DateTime myDateTime = new DateTime(2025, 1, 1);
+                    //inventoryTableAdapter1.Delete(rowID, rowID, quantityOnHand, expirationDate, warehouseLocation);
+                    inventoryTableAdapter1.Update(milk_WholesalerDataSet1.Inventory);
                     this.inventoryViewTableAdapter.Fill(this.milk_WholesalerDataSet1.InventoryView);
                 }
             }
