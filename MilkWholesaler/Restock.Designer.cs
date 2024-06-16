@@ -227,6 +227,7 @@
             this.offersViewDataGridView.MultiSelect = false;
             this.offersViewDataGridView.Name = "offersViewDataGridView";
             this.offersViewDataGridView.ReadOnly = true;
+            this.offersViewDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.offersViewDataGridView.Size = new System.Drawing.Size(343, 351);
             this.offersViewDataGridView.TabIndex = 1;
             // 

@@ -33,9 +33,9 @@ namespace MilkWholesaler
             ApplyExpirationColorCoding();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void textBox_search_TextChanged(object sender, EventArgs e)
         {
-            inventoryViewBindingSource.Filter = $"ProductName LIKE '%{textBox1.Text.Replace("'", "''")}%'";
+            inventoryViewBindingSource.Filter = $"ProductName LIKE '%{textBox_search.Text.Replace("'", "''")}%'";
         }
 
         private void inventoryViewDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

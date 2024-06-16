@@ -57,24 +57,10 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inventoryViewTableAdapter = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.InventoryViewTableAdapter();
             this.tableAdapterManager = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button_restock = new System.Windows.Forms.Button();
-            this.button_select = new System.Windows.Forms.Button();
-            this.button_filter = new System.Windows.Forms.Button();
-            this.button_search = new System.Windows.Forms.Button();
+            this.textBox_search = new System.Windows.Forms.TextBox();
             this.button_return = new System.Windows.Forms.Button();
             this.inventoryTableAdapter1 = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.InventoryTableAdapter();
-            this.inventoryViewTableAdapter = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.InventoryViewTableAdapter();
-            this.tableAdapterManager = new MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager();
-            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InventoryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Restock = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryViewBindingNavigator)).BeginInit();
             this.inventoryViewBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryViewBindingSource)).BeginInit();
@@ -108,7 +94,7 @@
             this.inventoryViewBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.inventoryViewBindingNavigator.Name = "inventoryViewBindingNavigator";
             this.inventoryViewBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.inventoryViewBindingNavigator.Size = new System.Drawing.Size(876, 25);
+            this.inventoryViewBindingNavigator.Size = new System.Drawing.Size(868, 25);
             this.inventoryViewBindingNavigator.TabIndex = 4;
             this.inventoryViewBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -232,11 +218,12 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.inventoryViewDataGridView.DataSource = this.inventoryViewBindingSource;
-            this.inventoryViewDataGridView.Location = new System.Drawing.Point(102, 177);
+            this.inventoryViewDataGridView.Location = new System.Drawing.Point(12, 117);
             this.inventoryViewDataGridView.MultiSelect = false;
             this.inventoryViewDataGridView.Name = "inventoryViewDataGridView";
             this.inventoryViewDataGridView.ReadOnly = true;
-            this.inventoryViewDataGridView.Size = new System.Drawing.Size(746, 220);
+            this.inventoryViewDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.inventoryViewDataGridView.Size = new System.Drawing.Size(843, 412);
             this.inventoryViewDataGridView.TabIndex = 5;
             this.inventoryViewDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.inventoryViewDataGridView_CellContentClick);
             // 
@@ -328,53 +315,13 @@
             this.tableAdapterManager.SuppliersTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // textBox1
+            // textBox_search
             // 
-            this.textBox1.Location = new System.Drawing.Point(169, 151);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // button_restock
-            // 
-            this.button_restock.BackgroundImage = global::MilkWholesaler.Properties.Resources.restock;
-            this.button_restock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_restock.Location = new System.Drawing.Point(38, 410);
-            this.button_restock.Name = "button_restock";
-            this.button_restock.Size = new System.Drawing.Size(40, 40);
-            this.button_restock.TabIndex = 6;
-            this.button_restock.UseVisualStyleBackColor = true;
-            // 
-            // button_select
-            // 
-            this.button_select.BackgroundImage = global::MilkWholesaler.Properties.Resources.select;
-            this.button_select.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_select.Location = new System.Drawing.Point(47, 304);
-            this.button_select.Name = "button_select";
-            this.button_select.Size = new System.Drawing.Size(40, 40);
-            this.button_select.TabIndex = 3;
-            this.button_select.UseVisualStyleBackColor = true;
-            // 
-            // button_filter
-            // 
-            this.button_filter.BackgroundImage = global::MilkWholesaler.Properties.Resources.filter;
-            this.button_filter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_filter.Location = new System.Drawing.Point(47, 199);
-            this.button_filter.Name = "button_filter";
-            this.button_filter.Size = new System.Drawing.Size(40, 40);
-            this.button_filter.TabIndex = 2;
-            this.button_filter.UseVisualStyleBackColor = true;
-            // 
-            // button_search
-            // 
-            this.button_search.BackgroundImage = global::MilkWholesaler.Properties.Resources.search;
-            this.button_search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_search.Location = new System.Drawing.Point(47, 245);
-            this.button_search.Name = "button_search";
-            this.button_search.Size = new System.Drawing.Size(40, 40);
-            this.button_search.TabIndex = 1;
-            this.button_search.UseVisualStyleBackColor = true;
+            this.textBox_search.Location = new System.Drawing.Point(50, 91);
+            this.textBox_search.Name = "textBox_search";
+            this.textBox_search.Size = new System.Drawing.Size(123, 20);
+            this.textBox_search.TabIndex = 7;
+            this.textBox_search.TextChanged += new System.EventHandler(this.textBox_search_TextChanged);
             // 
             // button_return
             // 
@@ -391,98 +338,24 @@
             // 
             this.inventoryTableAdapter1.ClearBeforeFill = true;
             // 
-            // inventoryViewTableAdapter
+            // label1
             // 
-            this.inventoryViewTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ClientsTableAdapter = null;
-            this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.InventoryTableAdapter = null;
-            this.tableAdapterManager.InventoryViewTableAdapter = null;
-            this.tableAdapterManager.OffersTableAdapter = null;
-            this.tableAdapterManager.OrderDetailsTableAdapter = null;
-            this.tableAdapterManager.OrdersTableAdapter = null;
-            this.tableAdapterManager.OrdersViewTableAdapter = null;
-            this.tableAdapterManager.ProductsTableAdapter = null;
-            this.tableAdapterManager.SalesDetailsTableAdapter = null;
-            this.tableAdapterManager.SalesTableAdapter = null;
-            this.tableAdapterManager.SalesViewTableAdapter = null;
-            this.tableAdapterManager.SuppliersTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = MilkWholesaler.Milk_WholesalerDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // ProductName
-            // 
-            this.ProductName.DataPropertyName = "ProductName";
-            this.ProductName.HeaderText = "ProductName";
-            this.ProductName.Name = "ProductName";
-            // 
-            // InventoryID
-            // 
-            this.InventoryID.DataPropertyName = "InventoryID";
-            this.InventoryID.HeaderText = "InventoryID";
-            this.InventoryID.Name = "InventoryID";
-            this.InventoryID.Visible = false;
-            // 
-            // ProductID
-            // 
-            this.ProductID.DataPropertyName = "ProductID";
-            this.ProductID.HeaderText = "ProductID";
-            this.ProductID.Name = "ProductID";
-            this.ProductID.Visible = false;
-            // 
-            // Restock
-            // 
-            this.Restock.HeaderText = "Restock";
-            this.Restock.Name = "Restock";
-            this.Restock.Text = "Restock";
-            this.Restock.ToolTipText = "Restock";
-            this.Restock.UseColumnTextForButtonValue = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "QuantityOnHand";
-            this.dataGridViewTextBoxColumn2.HeaderText = "QuantityOnHand";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "ExpirationDate";
-            this.dataGridViewTextBoxColumn3.HeaderText = "ExpirationDate";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "WarehouseLocation";
-            this.dataGridViewTextBoxColumn4.HeaderText = "WarehouseLocation";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Description";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Description";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "UnitPrice";
-            this.dataGridViewTextBoxColumn6.HeaderText = "UnitPrice";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(47, 75);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Search by product name:";
             // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(876, 591);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button_restock);
+            this.ClientSize = new System.Drawing.Size(868, 549);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox_search);
             this.Controls.Add(this.inventoryViewDataGridView);
             this.Controls.Add(this.inventoryViewBindingNavigator);
-            this.Controls.Add(this.button_select);
-            this.Controls.Add(this.button_filter);
-            this.Controls.Add(this.button_search);
             this.Controls.Add(this.button_return);
             this.Name = "Inventory";
             this.Text = "Inventory";
@@ -501,9 +374,6 @@
         #endregion
 
         private System.Windows.Forms.Button button_return;
-        private System.Windows.Forms.Button button_search;
-        private System.Windows.Forms.Button button_filter;
-        private System.Windows.Forms.Button button_select;
         private Milk_WholesalerDataSet1 milk_WholesalerDataSet1;
         private System.Windows.Forms.BindingSource inventoryViewBindingSource;
         private Milk_WholesalerDataSet1TableAdapters.InventoryViewTableAdapter inventoryViewTableAdapter;
@@ -522,8 +392,7 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton inventoryViewBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView inventoryViewDataGridView;
-        private System.Windows.Forms.Button button_restock;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_search;
         private Milk_WholesalerDataSet1TableAdapters.InventoryTableAdapter inventoryTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
         private System.Windows.Forms.DataGridViewTextBoxColumn InventoryID;
@@ -534,5 +403,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.Label label1;
     }
 }

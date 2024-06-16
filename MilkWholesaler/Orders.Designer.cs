@@ -235,6 +235,7 @@
             this.ordersViewDataGridView.MultiSelect = false;
             this.ordersViewDataGridView.Name = "ordersViewDataGridView";
             this.ordersViewDataGridView.ReadOnly = true;
+            this.ordersViewDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ordersViewDataGridView.Size = new System.Drawing.Size(744, 453);
             this.ordersViewDataGridView.TabIndex = 2;
             // 
@@ -243,42 +244,49 @@
             this.dataGridViewTextBoxColumn1.DataPropertyName = "SupplierName";
             this.dataGridViewTextBoxColumn1.HeaderText = "SupplierName";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "ContactPerson";
             this.dataGridViewTextBoxColumn2.HeaderText = "ContactPerson";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Phone";
             this.dataGridViewTextBoxColumn3.HeaderText = "Phone";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "OrderDate";
             this.dataGridViewTextBoxColumn5.HeaderText = "OrderDate";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Status";
             this.dataGridViewTextBoxColumn6.HeaderText = "Status";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // productDetailsColumn
             // 
             this.productDetailsColumn.DataPropertyName = "ProductDetails";
             this.productDetailsColumn.HeaderText = "ProductDetails";
             this.productDetailsColumn.Name = "productDetailsColumn";
+            this.productDetailsColumn.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "TotalPrice";
             this.dataGridViewTextBoxColumn8.HeaderText = "TotalPrice";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
             // label1
             // 

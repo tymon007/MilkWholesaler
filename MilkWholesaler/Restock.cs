@@ -110,6 +110,12 @@ namespace MilkWholesaler
 
         private void button_complete_Click(object sender, EventArgs e)
         {
+            if (checkedListBox1.Items.Count == 0)
+            {
+                MessageBox.Show("Please select at least one product to order.", "Selection Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             decimal sum_price = 0;
 
             foreach (OrderItem item in orderItems)
